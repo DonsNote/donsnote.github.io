@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { getAllPosts } from "@/lib/mdx";
 import { projects } from "@/content/projects";
 import { SearchItem } from "@/lib/search";
 
@@ -23,15 +22,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const posts = getAllPosts();
   const searchItems: SearchItem[] = [
-    ...posts.map((post) => ({
-      type: "post" as const,
-      title: post.frontmatter.title,
-      description: post.frontmatter.description,
-      tags: post.frontmatter.tags,
-      href: `/blog/${post.slug}`,
-    })),
     ...projects.map((project) => ({
       type: "project" as const,
       title: project.title,
