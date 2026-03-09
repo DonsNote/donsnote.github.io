@@ -1,10 +1,8 @@
 ---
-layout: default
 title: Mini Shell
-parent: 42
-grand_parent: Bootcamp
-permalink: /docs/Bootcamp/42/Minishell/
-nav_order: 9
+description: 
+date: 
+tags: []
 ---
 
 # Mandatory

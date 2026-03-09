@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 3
 title: 온라인 강의와 협업 in Goorm
 description: "Goorm Supporters"
-parent: Supporters
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 ```

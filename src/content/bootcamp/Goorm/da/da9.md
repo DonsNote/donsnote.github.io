@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 9
 title: DA - A/B 테스트
 description: "Data Analysis 9"
-parent: DA
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 9 강 - A/B 테스트 

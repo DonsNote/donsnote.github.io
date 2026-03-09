@@ -1,10 +1,8 @@
 ---
-layout: default
 title: Philosophers
-parent: 42
-grand_parent: Bootcamp
-permalink: /docs/Bootcamp/42/Philosophers/
-nav_order: 8
+description: 
+date: 
+tags: []
 ---
 
 # [Repository](https://github.com/DonsNote/Dons-42/tree/main/00_Circle/philosophers)

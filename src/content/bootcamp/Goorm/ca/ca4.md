@@ -1,12 +1,8 @@
 ---
-layout: default
-nav_order: 4
 title: Customer Analysis 4 - 고객 인터뷰
 description: "Customer Interview"
-parent: CA
-grand_parent: Goorm
-has_children: false
-permalink: /docs/Bootcamp/Goorm/Lecture/ca/ca4/
+date: 
+tags: []
 ---
 
 # 제 4 강 - 고객 인터뷰

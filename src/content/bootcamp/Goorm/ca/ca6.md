@@ -1,12 +1,8 @@
 ---
-layout: default
-nav_order: 6
 title: Customer Analysis 6 - 세그멘테이션
 description: "Methodology"
-parent: CA
-grand_parent: Goorm
-has_children: false
-permalink: /docs/Bootcamp/Goorm/Lecture/ca/ca6/
+date: 
+tags: []
 ---
 
 # 제 6 강 - 세그멘테이션

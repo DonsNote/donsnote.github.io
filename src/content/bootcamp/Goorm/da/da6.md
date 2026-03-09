@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 6
 title: DA - 제품 중심 비즈니스의 데이터 전략
 description: "Data Analysis 6"
-parent: DA
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 6 강 - 제품 중심 비즈니스의 데이터 전략

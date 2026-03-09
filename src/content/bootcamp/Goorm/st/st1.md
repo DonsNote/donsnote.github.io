@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 1
 title: ST - 문제 해결과 린 사고
 description: "Solution & analytical thinking 1"
-parent: ST
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 1 강 - 문제 해결과 린 사고

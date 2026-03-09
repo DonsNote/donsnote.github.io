@@ -1,12 +1,8 @@
 ---
-layout: default
-nav_order: 3
 title: Customer Analysis 3 - 페르소나
 description: "Methodology"
-parent: CA
-grand_parent: Goorm
-has_children: false
-permalink: /docs/Bootcamp/Goorm/Lecture/ca/ca3/
+date: 
+tags: []
 ---
 
 # 제 3 강 - 페르소나 (Persona)

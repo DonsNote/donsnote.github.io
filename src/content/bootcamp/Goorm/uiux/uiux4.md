@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 4
 title: UIUX 4 - Information Architectuer
 description: "User Interface / User Experience 4"
-parent: UIUX
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 4 강 - 정보 구조와 탐색 설계

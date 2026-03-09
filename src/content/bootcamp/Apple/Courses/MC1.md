@@ -1,12 +1,8 @@
 ---
-layout: default
-nav_order: 2
 title: Mini Challenge 1
 description: "First Challenge"
-parent: Apple
-grand_parent: Bootcamp
-has_children: false
-permalink: /doc/Bootcamp/Apple/Mini Challenge 1/
+date: 
+tags: []
 ---
 
 # Mini Challenge 1

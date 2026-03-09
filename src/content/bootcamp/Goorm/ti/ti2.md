@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 2
 title: TI - AI 서비스의 이해
 description: "Technology Trends and Industry Insights 2"
-parent: TI
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 2 강 - AI 서비스의 이해

@@ -1,9 +1,8 @@
 ---
-layout: default
 title: Apple
-parent: Bootcamp
-has_children: true
-nav_order: 1
+description: 
+date: 
+tags: []
 ---
 
 # Apple Developer Academy

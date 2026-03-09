@@ -1,10 +1,8 @@
 ---
-layout: default
 title: Get Next Line
-parent: 42
-grand_parent: Bootcamp
-permalink: /docs/Bootcamp/42/GetNextLine/
-nav_order: 3
+description: 
+date: 
+tags: []
 ---
 
 # [Repository](https://github.com/DonsNote/Dons-42/tree/main/00_Circle/get_next_line)

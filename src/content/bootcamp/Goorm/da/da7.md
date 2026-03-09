@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 7
 title: DA - 플랫폼 중심 비즈니스의 데이터 전략
 description: "Data Analysis 7"
-parent: DA
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 7 강 - 플랫폼 중심 비즈니스의 데이터 전략

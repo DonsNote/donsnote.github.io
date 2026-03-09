@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 5
 title: DA - 코호트 분석과 사용자 유지 전략
 description: "Data Analysis 5"
-parent: DA
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 5 강 - 코호트 분석과 사용자 유지 전략

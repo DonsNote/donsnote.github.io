@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 4
 title: ST - 디자인 사고와 스프린트
 description: "Solution & analytical thinking 4"
-parent: ST
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 4 강 - 디자인 사고와 스프린트

@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 3
 title: ST - 발산적 사고와 수렴적 사고
 description: "Solution & analytical thinking 3"
-parent: ST
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 3 강 - 발산적 사고와 수렴적 사고

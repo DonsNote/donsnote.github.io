@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 2
 title: UIUX 2 - 인지과학과 디자인 심리학
 description: "User Interface / User Experience 2"
-parent: UIUX
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 2 강 - 인지과학과 디자인 심리학

@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 
 title: DA - 퍼널 분석과 AARRR
 description: "Data Analysis 3"
-parent: DA
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 3 강 - 퍼널 분석과 AARRR

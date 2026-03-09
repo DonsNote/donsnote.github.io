@@ -1,12 +1,8 @@
 ---
-layout: default
-nav_order: 2
 title: Customer Analysis 2 - 고객 기회 발견
 description: "Methodology"
-parent: CA
-grand_parent: Goorm
-has_children: false
-permalink: /docs/Bootcamp/Goorm/Lecture/ca/ca2/
+date: 
+tags: []
 ---
 
 # 제 2 강 - 고객 기회 발견

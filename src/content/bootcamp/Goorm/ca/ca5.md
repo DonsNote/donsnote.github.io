@@ -1,12 +1,8 @@
 ---
-layout: default
-nav_order: 5
 title: Customer Analysis 5 - 데이터 분석
 description: "Methodology"
-parent: CA
-grand_parent: Goorm
-has_children: false
-permalink: /docs/Bootcamp/Goorm/Lecture/ca/ca5/
+date: 
+tags: []
 ---
 
 # 제 5 강 - 정량적 데이터 분석

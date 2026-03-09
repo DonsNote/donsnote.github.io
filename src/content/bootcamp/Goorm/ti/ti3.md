@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 3
 title: TI - 생성형 AI의 이해
 description: "Technology Trends and Industry Insights 3"
-parent: TI
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 3 강 - 생성형 AI의 이해

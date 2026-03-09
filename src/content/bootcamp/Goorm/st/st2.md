@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 2
 title: ST - 문제의 근본적인 원인 찾기
 description: "Solution & analytical thinking 2"
-parent: ST
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 2 강 - 문제의 근본적인 원인 찾기

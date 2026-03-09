@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 7
 title: UIUX 7 - UX 라이팅
 description: "User Interface / User Experience 7"
-parent: UIUX
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 7 강 - UX 라이팅

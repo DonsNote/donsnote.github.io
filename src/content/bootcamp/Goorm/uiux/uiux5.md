@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 5
 title: UIUX 5 - Interaction & Interface
 description: "User Interface / User Experience 5"
-parent: UIUX
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 5 강 - 인터랙션과 인터페이스 설계

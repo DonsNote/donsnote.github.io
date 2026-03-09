@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 4
 title: DA - 데이터 분석 도구와 활용 방법
 description: "Data Analysis 4"
-parent: DA
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 4 강 - 데이터 분석 도구와 활용 방법

@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 1
 title: 구름서포터즈
 description: "Goorm Supporters"
-parent: Supporters
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 ```

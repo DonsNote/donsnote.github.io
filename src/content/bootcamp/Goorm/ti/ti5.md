@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 5
 title: TI - 기술 불확실성과 의사결정
 description: "Technology Trends and Industry Insights 5"
-parent: TI
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 5 강 - 기술 불확실성과 의사결정

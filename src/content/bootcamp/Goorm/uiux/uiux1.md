@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 1
 title: UIUX 1 - 디자인의 본질
 description: "User Interface / User Experience 1"
-parent: UIUX
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 1 강 - 디자인의 본질

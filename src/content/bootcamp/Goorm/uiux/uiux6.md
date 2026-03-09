@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 6
 title: UIUX 6 - 디자인 시스템
 description: "User Interface / User Experience 6"
-parent: UIUX
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 6 강 - 디자인 시스템

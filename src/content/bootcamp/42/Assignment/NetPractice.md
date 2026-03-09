@@ -1,10 +1,8 @@
 ---
-layout: default
 title: Net Practice
-parent: 42
-grand_parent: Bootcamp
-permalink: /docs/Bootcamp/42/NetPractice/
-nav_order: 11
+description: 
+date: 
+tags: []
 ---
 
 # Mandatory

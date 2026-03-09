@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 4
 title: TI - 컴퓨팅 기술의 발전과 변화
 description: "Technology Trends and Industry Insights 4"
-parent: TI
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 4 강 - 컴퓨팅 기술의 발전과 변화

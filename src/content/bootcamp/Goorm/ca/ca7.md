@@ -1,12 +1,8 @@
 ---
-layout: default
-nav_order: 7
 title: Customer Analysis 7 - PRD
 description: "Methodology"
-parent: CA
-grand_parent: Goorm
-has_children: false
-permalink: /docs/Bootcamp/Goorm/Lecture/ca/ca7/
+date: 
+tags: []
 ---
 
 # 제 7 강 - PRD

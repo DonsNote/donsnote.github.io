@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 
 title: DA - 제품 지표 설계와 효과적 측정
 description: "Data Analysis 2"
-parent: DA
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 2 강 - 제품 지표 설계와 효과적 측정

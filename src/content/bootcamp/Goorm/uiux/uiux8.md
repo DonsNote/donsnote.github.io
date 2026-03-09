@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 
 title: UIUX 8 - 행동 유도 디자인 설계
 description: "User Interface / User Experience"
-parent: UIUX
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 8 강 - 행동 유도 디자인 설계

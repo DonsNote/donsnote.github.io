@@ -1,10 +1,8 @@
 ---
-layout: default
 title: Ft_Printf
-parent: 42
-grand_parent: Bootcamp
-permalink: /docs/Bootcamp/42/Printf/
-nav_order: 2
+description: 
+date: 
+tags: []
 ---
 
 # [Repository](https://github.com/DonsNote/Dons-42/tree/main/00_Circle/ft_printf)

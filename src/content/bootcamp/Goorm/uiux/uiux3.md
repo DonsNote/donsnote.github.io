@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 3
 title: UIUX 3 - UX 리서치
 description: "User Interface / User Experience 3"
-parent: UIUX
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 3 강 - UX 리서치 

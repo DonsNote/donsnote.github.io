@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 2
 title: 프로덕트 매니지먼트 마스터과정
 description: "Goorm Supporters"
-parent: Supporters
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 ```

@@ -1,10 +1,8 @@
 ---
-layout: default
 title: Born To Be Root
-parent: 42
-grand_parent: Bootcamp
-permalink: /docs/Bootcamp/42/BornToBeRoot/
-nav_order: 4
+description: 
+date: 
+tags: []
 ---
 
 

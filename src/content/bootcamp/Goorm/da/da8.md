@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 8
 title: DA - 온라인 커뮤니티 설계 전략
 description: "Data Analysis 8"
-parent: DA
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 8 강 - 온라인 커뮤니티 설계 전략

@@ -1,11 +1,8 @@
 ---
-layout: default
-nav_order: 1
 title: DA - 데이터 사고와 기초
 description: "Data Analysis 1"
-parent: DA
-grand_parent: Goorm
-has_children: false
+date: 
+tags: []
 ---
 
 # 제 1 강 - 데이터 사고와 기초

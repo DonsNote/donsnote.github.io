@@ -1,9 +1,8 @@
 ---
-layout: default
 title: Skills
-nav_order: 2
-has_children: true
-permalink: /docs/Skills/Skills/
+description: 
+date: 
+tags: []
 ---
 
 # Skills - What can Don do!?
