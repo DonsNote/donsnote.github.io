@@ -8,4 +8,5 @@ url: https://goorm.co
 color: "#34d399"
 date:
 order: 2
+group_order: [Projects, 고객분석, UI/UX 디자인, 기술 인사이트, 데이터 분석, 전략적 사고]
 ---

@@ -216,6 +216,7 @@ export function getAllBootcamps(): BootcampItem[] {
     let groups: GroupItem[] | undefined;
 
     if (hasGroups) {
+      const groupOrder: string[] = (root.group_order as string[]) ?? [];
       const groupMap = new Map<string, { lectures: LectureItem[]; subDir: string }>();
       for (const l of allLectures) {
         const key = l.group ?? "기타";
@@ -223,7 +224,14 @@ export function getAllBootcamps(): BootcampItem[] {
         groupMap.get(key)!.lectures.push({ title: l.title, description: l.description, content: l.content });
       }
       groups = Array.from(groupMap.entries())
-        .sort(([, a], [, b]) => a.subDir.localeCompare(b.subDir))
+        .sort(([nameA, { subDir: subA }], [nameB, { subDir: subB }]) => {
+          const ia = groupOrder.indexOf(nameA);
+          const ib = groupOrder.indexOf(nameB);
+          if (ia !== -1 && ib !== -1) return ia - ib;
+          if (ia !== -1) return -1;
+          if (ib !== -1) return 1;
+          return subA.localeCompare(subB);
+        })
         .map(([name, { lectures }]) => ({ name, lectures }));
     } else {
       allLectures.sort((a, b) =>
