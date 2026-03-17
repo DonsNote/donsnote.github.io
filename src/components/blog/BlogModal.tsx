@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
 
 interface BlogItem {
   title: string;
@@ -73,7 +74,7 @@ function Modal({ state, onClose }: { state: ModalState; onClose: () => void }) {
         {/* 본문 */}
         <div ref={contentRef} className="overflow-y-auto px-6 py-6 flex-1">
           <div className="prose">
-            <ReactMarkdown rehypePlugins={[rehypeRaw]}>{state.content}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{state.content}</ReactMarkdown>
           </div>
         </div>
       </div>

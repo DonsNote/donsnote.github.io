@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
 import { ProjectItem as Project } from "@/lib/mdx";
 
 const statusLabel: Record<Project["status"], string> = {
@@ -149,7 +150,7 @@ function Modal({ project, onClose }: { project: Project; onClose: () => void }) 
               style={{ borderTop: "1px solid var(--border)" }}
             >
               <div className="prose">
-                <ReactMarkdown rehypePlugins={[rehypeRaw]}>{project.content}</ReactMarkdown>
+                <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{project.content}</ReactMarkdown>
               </div>
             </div>
           )}

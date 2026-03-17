@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface LectureItem {
   title: string;
@@ -84,7 +85,7 @@ function Modal({
         {/* 본문 */}
         <div ref={contentRef} className="overflow-y-auto px-6 py-6 flex-1">
           <div className="prose">
-            <ReactMarkdown>{state.content}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{state.content}</ReactMarkdown>
           </div>
         </div>
       </div>
