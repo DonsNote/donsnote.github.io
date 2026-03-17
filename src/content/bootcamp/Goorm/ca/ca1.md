@@ -3,6 +3,7 @@ title: Customer Analysis 1 - 고객문제 접근
 description: "Methodology"
 date: 
 tags: []
+group: 고객분석
 ---
 
 # 제 1 강 - 고객 분석

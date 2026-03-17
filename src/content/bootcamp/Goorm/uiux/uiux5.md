@@ -3,6 +3,7 @@ title: UIUX 5 - Interaction & Interface
 description: "User Interface / User Experience 5"
 date: 
 tags: []
+group: UI/UX 디자인
 ---
 
 # 제 5 강 - 인터랙션과 인터페이스 설계

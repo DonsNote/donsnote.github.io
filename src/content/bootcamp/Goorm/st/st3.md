@@ -3,6 +3,7 @@ title: ST - 발산적 사고와 수렴적 사고
 description: "Solution & analytical thinking 3"
 date: 
 tags: []
+group: 전략적 사고
 ---
 
 # 제 3 강 - 발산적 사고와 수렴적 사고

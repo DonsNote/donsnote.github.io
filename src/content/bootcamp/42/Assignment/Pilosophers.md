@@ -3,6 +3,7 @@ title: Philosophers
 description: 
 date: 
 tags: []
+order: 9
 ---
 
 # [Repository](https://github.com/DonsNote/Dons-42/tree/main/00_Circle/philosophers)

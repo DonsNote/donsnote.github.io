@@ -3,6 +3,7 @@ title: UIUX 4 - Information Architectuer
 description: "User Interface / User Experience 4"
 date: 
 tags: []
+group: UI/UX 디자인
 ---
 
 # 제 4 강 - 정보 구조와 탐색 설계

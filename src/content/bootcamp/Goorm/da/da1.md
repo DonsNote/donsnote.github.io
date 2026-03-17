@@ -3,6 +3,7 @@ title: DA - 데이터 사고와 기초
 description: "Data Analysis 1"
 date: 
 tags: []
+group: 데이터 분석
 ---
 
 # 제 1 강 - 데이터 사고와 기초

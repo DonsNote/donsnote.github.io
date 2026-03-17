@@ -3,6 +3,7 @@ title: TI - 기술 트랜드와 전략적 변화
 description: "Technology Trends and Industry Insights 1"
 date: 
 tags: []
+group: 기술 인사이트
 ---
 
 # 제 1 강 - 기술 트렌드와 전략적 변화

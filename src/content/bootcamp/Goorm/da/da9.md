@@ -3,6 +3,7 @@ title: DA - A/B 테스트
 description: "Data Analysis 9"
 date: 
 tags: []
+group: 데이터 분석
 ---
 
 # 제 9 강 - A/B 테스트 

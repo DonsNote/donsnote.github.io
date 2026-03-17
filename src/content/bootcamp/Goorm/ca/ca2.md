@@ -3,6 +3,7 @@ title: Customer Analysis 2 - 고객 기회 발견
 description: "Methodology"
 date: 
 tags: []
+group: 고객분석
 ---
 
 # 제 2 강 - 고객 기회 발견

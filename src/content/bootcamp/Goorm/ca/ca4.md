@@ -3,6 +3,7 @@ title: Customer Analysis 4 - 고객 인터뷰
 description: "Customer Interview"
 date: 
 tags: []
+group: 고객분석
 ---
 
 # 제 4 강 - 고객 인터뷰

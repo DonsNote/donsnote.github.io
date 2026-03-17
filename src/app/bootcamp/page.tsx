@@ -1,4 +1,4 @@
-import { bootcamps } from "@/content/bootcamps";
+import { getAllBootcamps } from "@/lib/mdx";
 import BootcampCard from "@/components/bootcamp/BootcampCard";
 import type { Metadata } from "next";
 
@@ -8,6 +8,8 @@ export const metadata: Metadata = {
 };
 
 export default function BootcampPage() {
+  const bootcamps = getAllBootcamps();
+
   return (
     <div className="max-w-4xl mx-auto px-6 py-16 space-y-10">
       <div className="space-y-2">

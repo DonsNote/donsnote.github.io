@@ -3,6 +3,7 @@ title: Mini Challenge 1
 description: "First Challenge"
 date: 
 tags: []
+order: 4
 ---
 
 # Mini Challenge 1

@@ -3,6 +3,7 @@ title: ST - 문제 해결과 린 사고
 description: "Solution & analytical thinking 1"
 date: 
 tags: []
+group: 전략적 사고
 ---
 
 # 제 1 강 - 문제 해결과 린 사고

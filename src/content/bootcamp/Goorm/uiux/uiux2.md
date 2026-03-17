@@ -3,6 +3,7 @@ title: UIUX 2 - 인지과학과 디자인 심리학
 description: "User Interface / User Experience 2"
 date: 
 tags: []
+group: UI/UX 디자인
 ---
 
 # 제 2 강 - 인지과학과 디자인 심리학

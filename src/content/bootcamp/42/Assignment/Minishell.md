@@ -3,6 +3,7 @@ title: Mini Shell
 description: 
 date: 
 tags: []
+order: 7
 ---
 
 # Mandatory

@@ -3,6 +3,7 @@ title: UIUX 7 - UX 라이팅
 description: "User Interface / User Experience 7"
 date: 
 tags: []
+group: UI/UX 디자인
 ---
 
 # 제 7 강 - UX 라이팅

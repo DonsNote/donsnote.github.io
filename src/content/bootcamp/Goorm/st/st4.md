@@ -3,6 +3,7 @@ title: ST - 디자인 사고와 스프린트
 description: "Solution & analytical thinking 4"
 date: 
 tags: []
+group: 전략적 사고
 ---
 
 # 제 4 강 - 디자인 사고와 스프린트

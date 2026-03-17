@@ -3,6 +3,7 @@ title: Mini Talk
 description: 
 date: 
 tags: []
+order: 6
 ---
 
 # [Repository](https://github.com/DonsNote/Dons-42/tree/main/00_Circle/minitalk)

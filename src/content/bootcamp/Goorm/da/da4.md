@@ -3,6 +3,7 @@ title: DA - 데이터 분석 도구와 활용 방법
 description: "Data Analysis 4"
 date: 
 tags: []
+group: 데이터 분석
 ---
 
 # 제 4 강 - 데이터 분석 도구와 활용 방법

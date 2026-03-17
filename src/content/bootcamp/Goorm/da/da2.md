@@ -3,6 +3,7 @@ title: DA - 제품 지표 설계와 효과적 측정
 description: "Data Analysis 2"
 date: 
 tags: []
+group: 데이터 분석
 ---
 
 # 제 2 강 - 제품 지표 설계와 효과적 측정

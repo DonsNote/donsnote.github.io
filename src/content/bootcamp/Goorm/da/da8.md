@@ -3,6 +3,7 @@ title: DA - 온라인 커뮤니티 설계 전략
 description: "Data Analysis 8"
 date: 
 tags: []
+group: 데이터 분석
 ---
 
 # 제 8 강 - 온라인 커뮤니티 설계 전략

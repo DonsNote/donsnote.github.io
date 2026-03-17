@@ -3,6 +3,7 @@ title: UIUX 3 - UX 리서치
 description: "User Interface / User Experience 3"
 date: 
 tags: []
+group: UI/UX 디자인
 ---
 
 # 제 3 강 - UX 리서치 

@@ -3,6 +3,7 @@ title: ST - 문제의 근본적인 원인 찾기
 description: "Solution & analytical thinking 2"
 date: 
 tags: []
+group: 전략적 사고
 ---
 
 # 제 2 강 - 문제의 근본적인 원인 찾기

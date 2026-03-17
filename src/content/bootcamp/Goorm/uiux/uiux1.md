@@ -3,6 +3,7 @@ title: UIUX 1 - 디자인의 본질
 description: "User Interface / User Experience 1"
 date: 
 tags: []
+group: UI/UX 디자인
 ---
 
 # 제 1 강 - 디자인의 본질

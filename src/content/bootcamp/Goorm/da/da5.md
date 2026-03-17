@@ -3,6 +3,7 @@ title: DA - 코호트 분석과 사용자 유지 전략
 description: "Data Analysis 5"
 date: 
 tags: []
+group: 데이터 분석
 ---
 
 # 제 5 강 - 코호트 분석과 사용자 유지 전략

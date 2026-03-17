@@ -3,6 +3,7 @@ title: DA - 제품 중심 비즈니스의 데이터 전략
 description: "Data Analysis 6"
 date: 
 tags: []
+group: 데이터 분석
 ---
 
 # 제 6 강 - 제품 중심 비즈니스의 데이터 전략

@@ -3,6 +3,7 @@ title: Customer Analysis 3 - 페르소나
 description: "Methodology"
 date: 
 tags: []
+group: 고객분석
 ---
 
 # 제 3 강 - 페르소나 (Persona)

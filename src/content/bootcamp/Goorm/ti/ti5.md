@@ -3,6 +3,7 @@ title: TI - 기술 불확실성과 의사결정
 description: "Technology Trends and Industry Insights 5"
 date: 
 tags: []
+group: 기술 인사이트
 ---
 
 # 제 5 강 - 기술 불확실성과 의사결정

@@ -3,6 +3,7 @@ title: TI - 컴퓨팅 기술의 발전과 변화
 description: "Technology Trends and Industry Insights 4"
 date: 
 tags: []
+group: 기술 인사이트
 ---
 
 # 제 4 강 - 컴퓨팅 기술의 발전과 변화

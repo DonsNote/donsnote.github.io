@@ -3,6 +3,7 @@ title: UIUX 8 - 행동 유도 디자인 설계
 description: "User Interface / User Experience"
 date: 
 tags: []
+group: UI/UX 디자인
 ---
 
 # 제 8 강 - 행동 유도 디자인 설계

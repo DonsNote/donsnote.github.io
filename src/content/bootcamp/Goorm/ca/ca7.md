@@ -3,6 +3,7 @@ title: Customer Analysis 7 - PRD
 description: "Methodology"
 date: 
 tags: []
+group: 고객분석
 ---
 
 # 제 7 강 - PRD

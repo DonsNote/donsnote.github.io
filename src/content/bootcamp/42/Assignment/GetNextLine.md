@@ -3,6 +3,7 @@ title: Get Next Line
 description: 
 date: 
 tags: []
+order: 3
 ---
 
 # [Repository](https://github.com/DonsNote/Dons-42/tree/main/00_Circle/get_next_line)

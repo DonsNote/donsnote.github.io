@@ -3,6 +3,7 @@ title: Customer Analysis 5 - 데이터 분석
 description: "Methodology"
 date: 
 tags: []
+group: 고객분석
 ---
 
 # 제 5 강 - 정량적 데이터 분석

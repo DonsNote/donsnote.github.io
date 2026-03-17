@@ -1,7 +1,4 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { bootcamps, BootcampLecture } from "@/content/bootcamps";
+import { getAllBootcamps } from "@/lib/mdx";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import LectureList from "@/components/bootcamp/LectureModal";
@@ -10,32 +7,13 @@ interface PageProps {
   params: Promise<{ id: string }>;
 }
 
-const bootcampDir = path.join(process.cwd(), "src/content/bootcamp");
-
-function readMdContent(filePath: string): string | null {
-  if (!filePath) return null;
-  const fullPath = path.join(bootcampDir, filePath);
-  if (!fs.existsSync(fullPath)) return null;
-  const raw = fs.readFileSync(fullPath, "utf-8");
-  const { content } = matter(raw);
-  return content.trim() || null;
-}
-
-function withContent(lectures: BootcampLecture[]) {
-  return lectures.map((l) => ({
-    title: l.title,
-    description: l.description,
-    content: l.filePath ? readMdContent(l.filePath) : null,
-  }));
-}
-
 export async function generateStaticParams() {
-  return bootcamps.map((camp) => ({ id: camp.id }));
+  return getAllBootcamps().map((camp) => ({ id: camp.id }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { id } = await params;
-  const camp = bootcamps.find((c) => c.id === id);
+  const camp = getAllBootcamps().find((c) => c.id === id);
   if (!camp) return {};
   return {
     title: `${camp.name} | DonsNote`,
@@ -45,7 +23,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function BootcampDetailPage({ params }: PageProps) {
   const { id } = await params;
-  const camp = bootcamps.find((c) => c.id === id);
+  const camp = getAllBootcamps().find((c) => c.id === id);
   if (!camp) notFound();
 
   const totalCount = camp.courses
@@ -105,7 +83,7 @@ export default async function BootcampDetailPage({ params }: PageProps) {
       {/* 단순 목록 (Apple, 42) */}
       {camp.courses && (
         <LectureList
-          lectures={withContent(camp.courses)}
+          lectures={camp.courses}
           color={camp.color}
         />
       )}
@@ -125,7 +103,7 @@ export default async function BootcampDetailPage({ params }: PageProps) {
                 </span>
               </div>
               <LectureList
-                lectures={withContent(group.lectures)}
+                lectures={group.lectures}
                 color={camp.color}
                 groupName={group.name}
               />

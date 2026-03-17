@@ -3,6 +3,7 @@ title: TI - AI 서비스의 이해
 description: "Technology Trends and Industry Insights 2"
 date: 
 tags: []
+group: 기술 인사이트
 ---
 
 # 제 2 강 - AI 서비스의 이해

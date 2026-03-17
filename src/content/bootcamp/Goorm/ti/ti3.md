@@ -3,6 +3,7 @@ title: TI - 생성형 AI의 이해
 description: "Technology Trends and Industry Insights 3"
 date: 
 tags: []
+group: 기술 인사이트
 ---
 
 # 제 3 강 - 생성형 AI의 이해

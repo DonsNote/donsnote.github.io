@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Bootcamp } from "@/content/bootcamps";
+import { BootcampItem as Bootcamp } from "@/lib/mdx";
 
 export default function BootcampCard({ camp }: { camp: Bootcamp }) {
   const totalCount = camp.courses

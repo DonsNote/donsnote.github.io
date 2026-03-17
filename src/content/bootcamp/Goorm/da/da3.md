@@ -3,6 +3,7 @@ title: DA - 퍼널 분석과 AARRR
 description: "Data Analysis 3"
 date: 
 tags: []
+group: 데이터 분석
 ---
 
 # 제 3 강 - 퍼널 분석과 AARRR
