@@ -4,6 +4,7 @@ description: "Goorm Deep Dive - PM Master Semi-Project"
 date: "2026.03"
 tags: [PM, Project, Semi]
 group: Projects
+order: 1
 ---
 
 # Semi Project

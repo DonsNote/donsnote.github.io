@@ -4,6 +4,7 @@ description: "Goorm Deep Dive - PM Master Semi-Project First week Doc"
 date: "2026.03"
 tags: [PM, Project, Semi, doc]
 group: Projects
+order: 2
 ---
 
 # 1주차 - 문제 정의서
