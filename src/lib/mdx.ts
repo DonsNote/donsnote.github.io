@@ -7,6 +7,7 @@ export interface PostFrontmatter {
   date: string;
   description: string;
   tags: string[];
+  draft?: boolean;
 }
 
 export interface Post {
@@ -42,6 +43,7 @@ export function getPostBySlug(slug: string): Post {
       date: data.date ?? "",
       description: data.description ?? "",
       tags: data.tags ?? [],
+      draft: data.draft ?? false,
     },
     content,
   };
@@ -50,6 +52,7 @@ export function getPostBySlug(slug: string): Post {
 export function getAllPosts(): Post[] {
   return getPostSlugs()
     .map(getPostBySlug)
+    .filter((post) => !post.frontmatter.draft)
     .sort(
       (a, b) =>
         new Date(b.frontmatter.date).getTime() -
@@ -72,6 +75,7 @@ export interface BlogItem {
   date?: string;
   tags?: string[];
   content: string;
+  draft?: boolean;
 }
 
 function collectMdFiles(dir: string, base: string = dir): { filePath: string }[] {
@@ -273,9 +277,10 @@ export function getAllBlogItems(): BlogItem[] {
         date: data.date as string | undefined,
         tags: (data.tags as string[]) ?? [],
         content: content.trim(),
+        draft: (data.draft as boolean) ?? false,
       };
     })
-    .filter((item) => item.content.length > 0)
+    .filter((item) => item.content.length > 0 && !item.draft)
     .sort((a, b) => {
       if (!a.date && !b.date) return 0;
       if (!a.date) return 1;
