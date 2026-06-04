@@ -94,6 +94,8 @@ function collectMdFiles(dir: string, base: string = dir): { filePath: string }[]
 
 // ── Projects ────────────────────────────────────────────────────────────────
 
+export type ProjectCategory = "개발" | "디자인" | "사업";
+
 export interface ProjectItem {
   title: string;
   description: string;
@@ -101,6 +103,7 @@ export interface ProjectItem {
   githubUrl?: string;
   siteUrl?: string;
   status: "active" | "archived" | "wip";
+  category: ProjectCategory;
   content?: string;
 }
 
@@ -119,6 +122,7 @@ export function getAllProjects(): ProjectItem[] {
         githubUrl: data.githubUrl as string | undefined,
         siteUrl: data.siteUrl as string | undefined,
         status: ((data.status as string) ?? "active") as ProjectItem["status"],
+        category: ((data.category as string) ?? "개발") as ProjectItem["category"],
         _order: (data.order as number) ?? 999,
         content: content.trim() || undefined,
       };

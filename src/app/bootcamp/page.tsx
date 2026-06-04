@@ -21,7 +21,7 @@ export default function BootcampPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="flex flex-col gap-4">
         {bootcamps.map((camp) => (
           <BootcampCard key={camp.id} camp={camp} />
         ))}

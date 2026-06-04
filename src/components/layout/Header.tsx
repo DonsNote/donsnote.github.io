@@ -7,11 +7,10 @@ import HeaderSearch from "@/components/search/HeaderSearch";
 import { SearchItem } from "@/lib/search";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/blog", label: "Blog" },
+  { href: "/cv", label: "CV" },
   { href: "/projects", label: "Projects" },
   { href: "/bootcamp", label: "Bootcamp" },
-  { href: "/experience", label: "Experience" },
+  { href: "/blog", label: "Blog" },
 ];
 
 interface HeaderProps {
@@ -31,18 +30,19 @@ export default function Header({ searchItems }: HeaderProps) {
       className="sticky top-0 z-50"
     >
       <nav className="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
-        {/* 로고 */}
-        <Link
-          href="/"
-          className="font-bold text-lg tracking-tight transition-colors flex-shrink-0"
-          style={{ color: "var(--accent)" }}
-        >
-          DonsNote
-        </Link>
+        {/* 왼쪽: 로고 + 네비게이션 */}
+        <div className="flex items-center gap-2">
+          <Link
+            href="/"
+            className="font-bold text-lg tracking-tight transition-colors flex-shrink-0"
+            style={{ color: "var(--accent)" }}
+          >
+            DonsNote
+          </Link>
 
-        {/* 데스크탑 네비게이션 */}
-        <ul className="hidden md:flex items-center gap-1">
-          {navLinks.map(({ href, label }) => {
+          {/* 데스크탑 네비게이션 */}
+          <ul className="hidden md:flex items-center gap-1">
+            {navLinks.map(({ href, label }) => {
             const isActive =
               href === "/" ? pathname === "/" : pathname.startsWith(href);
             return (
@@ -75,8 +75,9 @@ export default function Header({ searchItems }: HeaderProps) {
                 </Link>
               </li>
             );
-          })}
-        </ul>
+            })}
+          </ul>
+        </div>
 
         {/* 데스크탑 우측: 검색 + GitHub */}
         <div className="hidden md:flex items-center gap-3">

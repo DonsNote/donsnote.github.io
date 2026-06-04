@@ -1,5 +1,6 @@
 import ProjectModal from "@/components/projects/ProjectModal";
 import { getAllProjects } from "@/lib/mdx";
+import type { ProjectCategory } from "@/lib/mdx";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,11 +8,11 @@ export const metadata: Metadata = {
   description: "DonsNote가 만든 프로젝트들을 소개합니다.",
 };
 
-const sections = [
-  { key: "wip",      label: "개발 중" },
-  { key: "active",   label: "운영 중" },
-  { key: "archived", label: "보관 및 미운영"    },
-] as const;
+const categories: { key: ProjectCategory; label: string; color: string }[] = [
+  { key: "개발", label: "개발",   color: "#a78bfa" },
+  { key: "디자인", label: "디자인", color: "#f472b6" },
+  { key: "사업",   label: "사업",   color: "#34d399" },
+];
 
 export default function ProjectsPage() {
   const all = getAllProjects();
@@ -28,14 +29,23 @@ export default function ProjectsPage() {
         </p>
       </div>
 
-      {sections.map(({ key, label }) => {
-        const items = all.filter((p) => p.status === key);
+      {categories.map(({ key, label, color }) => {
+        const items = all.filter((p) => p.category === key);
         if (items.length === 0) return null;
         return (
           <section key={key} className="space-y-4">
-            <h2 className="text-sm font-semibold uppercase tracking-wider" style={{ color: "var(--text-muted)" }}>
-              {label}
-            </h2>
+            <div className="flex items-center gap-2">
+              <span
+                className="w-2 h-2 rounded-full"
+                style={{ backgroundColor: color }}
+              />
+              <h2
+                className="text-sm font-semibold uppercase tracking-wider"
+                style={{ color: "var(--text-muted)" }}
+              >
+                {label}
+              </h2>
+            </div>
             <ProjectModal projects={items} />
           </section>
         );

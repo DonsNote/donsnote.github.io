@@ -7,7 +7,7 @@ id: apple
 period: 2023 - 2024
 url: https://developeracademy.postech.ac.kr
 color: "#a78bfa"
-order: 1
+order: 2
 ---
 
 # Apple Developer Academy

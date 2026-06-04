@@ -10,13 +10,15 @@
 
 | 분류 | 기술 |
 |------|------|
-| 프레임워크 | Next.js 15 (App Router) |
+| 프레임워크 | Next.js 16.1.6 (App Router) |
 | UI 라이브러리 | React 19 |
 | 언어 | TypeScript 5 |
 | 스타일링 | Tailwind CSS v4, CSS Custom Properties |
-| 마크다운 | gray-matter, react-markdown, rehype-raw |
+| 마크다운 | gray-matter, react-markdown, rehype-raw, remark-gfm |
+| MDX | next-mdx-remote |
+| 테마 | next-themes |
 | 검색 | Fuse.js (퍼지 검색) |
-| 배포 | GitHub Pages (정적 내보내기) |
+| 배포 | GitHub Pages (정적 내보내기) + GitHub Actions |
 
 ---
 
@@ -24,10 +26,13 @@
 
 ```
 donsnote.github.io/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml          # GitHub Actions CI/CD (main 푸시 시 자동 배포)
 ├── src/
 │   ├── app/                    # Next.js App Router 페이지
 │   │   ├── page.tsx            # 홈 (프로필, 타임라인, 기술 스택)
-│   │   ├── layout.tsx          # 루트 레이아웃
+│   │   ├── layout.tsx          # 루트 레이아웃 (헤더 검색 데이터 주입)
 │   │   ├── globals.css         # 글로벌 스타일 & 다크 테마 변수
 │   │   ├── blog/               # 블로그 목록 페이지
 │   │   ├── projects/           # 프로젝트 갤러리 페이지
@@ -37,13 +42,13 @@ donsnote.github.io/
 │   ├── components/             # React 컴포넌트
 │   │   ├── layout/             # Header, Footer
 │   │   ├── blog/               # PostCard, BlogModal
-│   │   ├── projects/           # ProjectCard
+│   │   ├── projects/           # ProjectCard, ProjectModal
 │   │   ├── experience/         # ExperienceCard
 │   │   ├── bootcamp/           # BootcampCard, LectureModal
 │   │   └── search/             # SearchBox, HeaderSearch
 │   │
 │   ├── content/                # 데이터 & 마크다운 콘텐츠
-│   │   ├── projects.ts         # (미사용) 레거시 프로젝트 데이터
+│   │   ├── projects.ts         # 검색용 프로젝트 정적 데이터 (layout.tsx에서 사용)
 │   │   ├── experiences.ts      # 경력 데이터 (experience 페이지용)
 │   │   ├── bootcamps.ts        # (미사용) 레거시 부트캠프 메타데이터
 │   │   ├── blog/               # 블로그 마크다운 (.md) — 파일만 추가하면 자동 등록
@@ -62,17 +67,30 @@ donsnote.github.io/
 │   │   │   └── 42/             # 42 Seoul (11개 과제)
 │   │   │       ├── 42.md       # 부트캠프 루트 메타데이터
 │   │   │       └── Assignment/ # 과제 마크다운 파일들
-│   │   ├── experience/         # 경험 콘텐츠 (Jobs, Edu, Freelancer)
+│   │   ├── experience/         # 경험 콘텐츠
+│   │   │   ├── Exp.md          # 경험 루트 파일
+│   │   │   ├── Jobs/           # 직장 경력 (Jobs.md)
+│   │   │   ├── Edu/            # 학력 (Edu.md)
+│   │   │   └── Freelancer/     # 프리랜서 (Freelancer.md)
 │   │   ├── projects/           # 프로젝트 상세 마크다운 (.md)
-│   │   └── skills/             # 기술 콘텐츠 (Language, Tools, Domain)
+│   │   └── skills/             # 기술 콘텐츠
+│   │       ├── Skills.md       # 기술 루트 파일
+│   │       ├── Language/       # 언어 스킬 (Language.md)
+│   │       ├── Tools/          # 도구 스킬 (Tools.md)
+│   │       └── Domain/         # 도메인 스킬 (Domain.md)
 │   │
 │   └── lib/
 │       ├── mdx.ts              # 마크다운 파싱 & 부트캠프 동적 로딩 핵심 유틸
-│       └── search.ts           # 검색 타입 정의
+│       └── search.ts           # 검색 타입 정의 (SearchItem: post | project)
 │
-├── public/                     # 정적 자산 (이미지, 파일, SVG)
-├── out/                        # 빌드 출력 (GitHub Pages 배포)
-├── next.config.ts              # Next.js 설정
+├── public/                     # 정적 자산
+│   ├── files/                  # PDF 자료 (강의 과제물 등)
+│   └── images/
+│       ├── blog/               # 블로그 포스트 이미지
+│       ├── experience/         # 경험 섹션 이미지
+│       └── projects/           # 프로젝트 이미지
+├── next.config.ts              # Next.js 설정 (output: "export")
+├── postcss.config.mjs          # PostCSS 설정 (Tailwind v4)
 ├── tsconfig.json               # TypeScript 설정
 └── package.json
 ```
@@ -83,9 +101,14 @@ donsnote.github.io/
 
 ### 블로그
 - 마크다운 파일 기반 포스트 관리
-- frontmatter로 메타데이터(제목, 날짜, 태그) 관리
+- frontmatter로 메타데이터(제목, 날짜, 태그, draft) 관리
 - 모달 팝업으로 콘텐츠 표시
 - ESC / 외부 클릭으로 닫기
+
+### 프로젝트 갤러리
+- 마크다운 파일 기반 프로젝트 카드 관리
+- `status` 필드로 상태 표시: `active`(운영 중) / `wip`(개발 중) / `archived`(보관)
+- 카드 클릭 시 모달로 상세 내용 표시 (GitHub 링크, 사이트 링크 포함)
 
 ### 부트캠프 기록
 
@@ -97,9 +120,9 @@ donsnote.github.io/
 
 | 부트캠프 | 기간 | 모드 | 총 강의 |
 |---------|------|------|---------|
-| Apple Developer Academy @ POSTECH | 2023.03 ~ 2024.02 | 단순 목록 | 13개 |
-| 42 Seoul | 2024 ~ 2025 | 단순 목록 | 11개 |
-| Goorm Deep Dive (PM) | 2025 ~ 2026 | 그룹 목록 | 37개 (6개 그룹) |
+| Apple Developer Academy @ POSTECH | 2023 - 2024 | 단순 목록 | 13개 |
+| 42 Seoul | 2024 - 2025 | 단순 목록 | 11개 |
+| Goorm Deep Dive (PM) | 2025 - 2026 | 그룹 목록 | 37개 (6개 그룹) |
 
 #### Goorm 그룹 구성 (group_order 순)
 
@@ -124,9 +147,9 @@ donsnote.github.io/
 6. `group_order`로 그룹 순서 결정, 미등록 그룹은 알파벳순 마지막에 배치
 
 ### 검색
-- Fuse.js 퍼지 검색으로 모든 콘텐츠 통합 검색
+- Fuse.js 퍼지 검색으로 프로젝트 콘텐츠 검색
 - 가중치 기반 랭킹: 제목(0.6) > 설명(0.3) > 태그(0.1)
-- 최대 6개 결과 드롭다운 표시
+- 최대 6개 결과 드롭다운 표시 (검색 유형: `project`)
 
 ### 반응형 & 테마
 - Tailwind CSS 반응형 레이아웃 (모바일 메뉴 포함)
@@ -157,6 +180,17 @@ npm run build
 
 `next.config.ts`에서 `output: "export"` 설정으로 정적 HTML로 내보냅니다. 빌드 결과물(`out/`)을 GitHub Pages에 배포합니다.
 
+### CI/CD (GitHub Actions)
+
+`main` 브랜치에 푸시하면 `.github/workflows/deploy.yml`이 자동으로 실행됩니다:
+
+1. Node.js 20 환경 설정
+2. `npm ci`로 의존성 설치
+3. `npm run build`로 정적 빌드
+4. `out/` 디렉토리를 GitHub Pages에 배포
+
+`workflow_dispatch`로 수동 트리거도 가능합니다.
+
 ---
 
 ## 콘텐츠 추가 방법
@@ -171,10 +205,13 @@ title: 글 제목
 date: YYYY-MM-DD
 description: 짧은 설명
 tags: [tag1, tag2]
+draft: false
 ---
 
 본문 내용...
 ```
+
+`draft: true`로 설정하면 빌드에서 제외됩니다.
 
 ### 부트캠프 강의/카드 추가
 
@@ -246,5 +283,5 @@ order: 1
 프로젝트 상세 내용 (선택사항)...
 ```
 
-`status` 값: `active` | `archived` | `wip`  
+`status` 값: `active`(운영 중) | `wip`(개발 중) | `archived`(보관)  
 `order` 값: 낮을수록 먼저 표시 (미지정 시 999)
