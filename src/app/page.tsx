@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { GitHubIcon } from "@/lib/icons";
+import Image from "next/image";
 
 const aboutCards = [
   {
@@ -26,6 +26,8 @@ const aboutCards = [
 
 const nowItems = [
   { text: "Goorm Deep Dive PM 과정 수료 중", color: "#34d399" },
+  { text: "Aesopos Inc. 운영 중 (종합 컨설팅 및 광고영상제작)", color: "#736fc7" },
+  { text: "Aesopos Inc. Pivoting 준비 중 (IT 서비스)", color: "#c7856f" },
 ];
 
 const socialLinks = [
