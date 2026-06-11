@@ -1,6 +1,6 @@
 ---
 title: Get Next Line
-description: 
+description: what is fd?
 date: 
 tags: []
 order: 3

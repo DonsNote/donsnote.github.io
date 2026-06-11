@@ -1,6 +1,6 @@
 ---
 title: Philosophers
-description: 
+description: enjoy dinner
 date: 
 tags: []
 order: 9

@@ -6,7 +6,7 @@ import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import BaseModal from "@/components/ui/BaseModal";
 import { ProjectItem as Project } from "@/lib/mdx";
-import { GitHubIcon, ExternalLinkIcon, ChevronRightIcon, FigmaIcon } from "@/lib/icons";
+import { GitHubIcon, ExternalLinkIcon, FigmaIcon, ChevronRightIcon } from "@/lib/icons";
 import { markdownComponents } from "@/lib/markdownComponents";
 
 const categoryColor: Record<string, string> = {
@@ -100,82 +100,86 @@ function ProjectCard({ project, onClick }: { project: Project; onClick: () => vo
       onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border)")}
     >
       <div className="w-1 flex-shrink-0" style={{ backgroundColor: color }} />
-      <div className="flex-1 p-6 space-y-4 flex flex-col">
-      <div className="flex items-start justify-between gap-4">
-        <h2 className="text-lg font-semibold" style={{ color: "var(--text-primary)" }}>
-          {project.title}
-        </h2>
-        <span
-          className="text-xs px-2 py-0.5 rounded-full flex-shrink-0 font-medium"
-          style={{ color: statusColor[project.status], backgroundColor: `${statusColor[project.status]}18` }}
-        >
-          {statusLabel[project.status]}
-        </span>
-      </div>
+      <div className="flex-1 flex items-center justify-between gap-6 px-6 py-3.5">
 
-      <p className="text-sm leading-relaxed flex-1" style={{ color: "var(--text-secondary)" }}>
-        {project.description}
-      </p>
+        {/* 제목 + 설명 */}
+        <div className="flex-1 min-w-0 space-y-0.5">
+          <h2 className="font-semibold text-sm leading-snug" style={{ color: "var(--text-primary)" }}>
+            {project.title}
+          </h2>
+          <p className="text-xs line-clamp-1 hidden md:block" style={{ color: "var(--text-secondary)" }}>
+            {project.description}
+          </p>
+        </div>
 
-      <div className="flex flex-wrap gap-1.5">
-        {project.tags.map((tag) => (
+        {/* 태그 */}
+        <div className="hidden md:flex flex-wrap gap-1.5 max-w-xs justify-end">
+          {project.tags.slice(0, 4).map((tag) => (
+            <span
+              key={tag}
+              className="text-xs px-2 py-0.5 rounded whitespace-nowrap"
+              style={{ backgroundColor: "var(--bg-tertiary)", color: "var(--text-muted)", border: "1px solid var(--border)" }}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* 링크 + 상태 + 화살표 */}
+        <div className="flex items-center gap-3 flex-shrink-0">
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="inline-flex items-center gap-1 text-xs transition-colors hidden sm:inline-flex"
+              style={{ color: "var(--text-secondary)" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text-primary)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
+            >
+              <GitHubIcon size={13} /> GitHub
+            </a>
+          )}
+          {project.figmaUrl && (
+            <a
+              href={project.figmaUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="inline-flex items-center gap-1 text-xs transition-colors hidden sm:inline-flex"
+              style={{ color: "var(--text-secondary)" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text-primary)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
+            >
+              <FigmaIcon size={13} /> Figma
+            </a>
+          )}
+          {project.siteUrl && (
+            <a
+              href={project.siteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="inline-flex items-center gap-1 text-xs transition-colors hidden sm:inline-flex"
+              style={{ color: "var(--accent)" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent-hover)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "var(--accent)")}
+            >
+              <ExternalLinkIcon size={13} /> 사이트
+            </a>
+          )}
           <span
-            key={tag}
-            className="px-2 py-0.5 rounded text-xs"
-            style={{ backgroundColor: "var(--bg-tertiary)", color: "var(--text-muted)", border: "1px solid var(--border)" }}
+            className="text-xs px-2 py-0.5 rounded-full font-medium hidden sm:inline"
+            style={{ color: statusColor[project.status], backgroundColor: `${statusColor[project.status]}18` }}
           >
-            {tag}
+            {statusLabel[project.status]}
           </span>
-        ))}
-      </div>
+          <span className="inline-flex items-center text-xs font-medium" style={{ color }}>
+            <ChevronRightIcon size={14} />
+          </span>
+        </div>
 
-      <div className="flex items-center gap-3 pt-1">
-        {project.githubUrl && (
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="inline-flex items-center gap-1.5 text-sm transition-colors"
-            style={{ color: "var(--text-secondary)" }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text-primary)")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
-          >
-            <GitHubIcon size={16} /> GitHub
-          </a>
-        )}
-        {project.figmaUrl && (
-          <a
-            href={project.figmaUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="inline-flex items-center gap-1.5 text-sm transition-colors"
-            style={{ color: "var(--text-secondary)" }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text-primary)")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
-          >
-            <FigmaIcon size={16} /> Figma
-          </a>
-        )}
-        {project.siteUrl && (
-          <a
-            href={project.siteUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="inline-flex items-center gap-1.5 text-sm transition-colors"
-            style={{ color: "var(--accent)" }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent-hover)")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "var(--accent)")}
-          >
-            <ExternalLinkIcon size={16} /> 사이트 방문
-          </a>
-        )}
-        <span className="ml-auto inline-flex items-center gap-1 text-xs font-medium" style={{ color: "var(--accent)" }}>
-          자세히 보기 <ChevronRightIcon size={12} />
-        </span>
-      </div>
       </div>
     </article>
   );
@@ -186,7 +190,7 @@ export default function ProjectModal({ projects }: { projects: Project[] }) {
 
   return (
     <>
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="flex flex-col gap-3">
         {projects.map((project) => (
           <ProjectCard key={project.title} project={project} onClick={() => setSelected(project)} />
         ))}

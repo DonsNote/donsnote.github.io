@@ -1,6 +1,6 @@
 ---
 title: Net Practice
-description: 
+description: tcp/ip
 date: 
 tags: []
 order: 8

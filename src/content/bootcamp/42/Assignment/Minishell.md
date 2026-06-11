@@ -1,6 +1,6 @@
 ---
 title: Mini Shell
-description: 
+description: shell is greatist
 date: 
 tags: []
 order: 7

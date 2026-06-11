@@ -8,5 +8,5 @@ category: Management
 githubUrl: https://github.com/Goorm-Deep-Dive
 figmaUrl: 
 siteUrl: 
-order: 4
+order: 7
 ---

@@ -1,6 +1,6 @@
 ---
 title: Ft_Printf
-description: 
+description: it`s write
 date: 
 tags: []
 order: 2

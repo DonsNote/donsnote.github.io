@@ -1,6 +1,6 @@
 ---
 title: So Long
-description: 
+description: let`s game
 date: 
 tags: []
 order: 5

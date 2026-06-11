@@ -1,8 +1,8 @@
 ---
 title: Born To Be Root
-description: 
+description: where you born?
 date: 
-tags: []
+tags: [linux, sh]
 order: 11
 ---
 

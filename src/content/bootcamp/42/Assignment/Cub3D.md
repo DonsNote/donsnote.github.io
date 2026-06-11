@@ -1,6 +1,6 @@
 ---
 title: Cub 3D
-description: 
+description: ray
 date: 
 tags: []
 order: 10

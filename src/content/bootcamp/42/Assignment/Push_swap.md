@@ -1,6 +1,6 @@
 ---
 title: Push Swap
-description: 
+description: sorting
 date: 
 tags: []
 order: 4
