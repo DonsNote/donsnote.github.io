@@ -89,7 +89,7 @@ export const skillGroups: SkillGroup[] = [
   },
 ];
 
-export const designTools = ["HWP", "PPT", "Pr", "Ae", "Ps"];
+export const designTools = ["Hwp", "PPT", "Pr", "Ae", "Ps"];
 
 export const managementSkills = ["PM", "HR", "HRD", "Accounting"];
 
@@ -102,13 +102,19 @@ export interface SocialItem {
 export const socialExperiences: SocialItem[] = [
   {
     title: "제주관광대학교 총학생회 조직위원장",
-    period: "2011.03 ~ 2012.03",
+    period: "2009",
     description:
       "대학 행사(OT, 체육대회, 축제 등) 기획/진행. 교내홍보물(베너, 현수막 등) 외부 판매(제주도 내 기업) 수익금으로 행사비용 및 각 학과 지원, 장학금 지급(2억원 여)",
   },
   {
+    title: "제주대학교 총학생회장",
+    period: "2011",
+    description:
+      "대학 행사(OT, 체육대회, 축제 등) 기획/진행. 교내홍보물(베너, 현수막 등) 외부 판매(제주도 내 기업) 수익금으로 행사비용 및 각 학과 지원, 장학금 지급",
+  },
+  {
     title: "대학생 동북아 대장정 9기 (NAFC 9th) 회장",
-    period: "2009.08 ~ 2010.07",
+    period: "2009",
     description:
       "100명의 선발된 대학생들이 14박 15일간 '차마고도'라는 컨텐츠를 가지고 중국을 여행하며 자신을 돌아보고 미래에 대한 비전 설계. 대장정 이후 인프라를 통한 1달에 한번씩 '남산원' 봉사활동 기획/진행",
   },
@@ -151,9 +157,8 @@ export const workExperiences: WorkItem[] = [
     company: "삼성애버랜드",
     companyEn: "Samsung Everland Resort",
     period: "2004",
-    role: "사원 (F-cast), 엔터테이먼트 (Entertainment)",
-    description:
-      "사원(Cast) 근태관리, 유로카니발(공연) 크로우 참여 및 파크 내 퍼레이드(오픈, 주간, 야간 등) 진행과 신규 퍼레이드 해피할로윈, 스플레쉬 퍼레이드 기획/제작에 참여하여 퍼레이드 오픈 진행",
+    role: "임직원, 인사/교육 (HR, L&D), 엔터테이먼트 (Entertainment)",
+    description: "(주)삼성물산 애버랜드 리조트사업부 소속 업무",
     category: "Employee",
   },
   // Freelance
