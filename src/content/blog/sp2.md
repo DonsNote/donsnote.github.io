@@ -3,6 +3,7 @@ title: 프로덕트 매니지먼트 마스터과정
 description: "Goorm Supporters"
 date: 
 tags: []
+draft: false
 ---
 
 ```
@@ -15,14 +16,14 @@ tags: []
 드디어 과정의 첫걸음을 시작했습니다. 두구두구두구!!
 이제까지의 거의 모든 학습은 오프라인으로 해왔던 지라 온라인 실시간 강의는 처음이라서 기대와 걱정(?)이
 ```
-![Goorm Deep Dive](/images/experience/Goorm/zoom.png)
+![Goorm Deep Dive](/images/experience/Goorm/zoom.webp)
 ```
 우선 온라인 실시간은 Zoom을 활용한 강의임.
 Zoom을 많이 안써봤는데 생각보다 화질 / 음성 모두 퀄리티가 좋음.
 우선 스샷에 중앙에 보이는 분은 강사님!(강사님에 대한건 나중에 또 작성하겠음)
 ```
 
-![Goorm Deep Dive](/images/experience/Goorm/discord.png)
+![Goorm Deep Dive](/images/experience/Goorm/discord.webp)
 ```
 학습관련 커뮤니티 관련 등등 현재 구름에서 공부하고있는 모든 학습자들과 관계자분들이 다 있는
 디스코드를 운영해 주시고 있음 각채널별 쓰레드별로 체계가 잘 잡혀있어서 사용하기 편하고
@@ -48,7 +49,7 @@ Zoom을 많이 안써봤는데 생각보다 화질 / 음성 모두 퀄리티가 
 ```
 
 ## 열심히 하면! 상품권도 줘!
-![Goorm Deep Dive](/images/experience/Goorm/expmart.png)
+![Goorm Deep Dive](/images/experience/Goorm/expmart.webp)
 ```
 구름 EXP상점이다!
 열심히 미션하고 퀘스트하고(학습관련) 하면! 구름 토큰을 주는데 이걸로 이것저것 해택을 구매해서

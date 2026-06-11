@@ -1,5 +1,6 @@
 import { getAllBootcamps } from "@/lib/mdx";
 import BootcampCard from "@/components/bootcamp/BootcampCard";
+import PageHeader from "@/components/ui/PageHeader";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,14 +13,7 @@ export default function BootcampPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-16 space-y-10">
-      <div className="space-y-2">
-        <h1 className="text-3xl font-bold" style={{ color: "var(--text-primary)" }}>
-          Bootcamp
-        </h1>
-        <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
-          참여한 부트캠프 과정 기록입니다.
-        </p>
-      </div>
+      <PageHeader title="Bootcamp" subtitle="참여한 부트캠프 과정 기록입니다." />
 
       <div className="flex flex-col gap-4">
         {bootcamps.map((camp) => (

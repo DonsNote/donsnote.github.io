@@ -3,6 +3,7 @@ title: 온라인 강의와 협업 in Goorm
 description: "Goorm Supporters"
 date: 
 tags: []
+draft: false
 ---
 
 ```
@@ -17,7 +18,7 @@ Goorm Deep Dive를 시작하고 실시간 온라인 강의를 들으며 개인�
 강사님이 랜덤(?)으로 짜주시는 그룹으로 그룹과제를 하게 되는데!!
 Zoom의 소회의실 기능을 이용해서 각 소회의실에서 화이트 보드를 이용하기도 하고!
 ```
-![Goorm Deep Dive](/images/experience/Goorm/sah.png)
+![Goorm Deep Dive](/images/experience/Goorm/sah.webp)
 
 ```
 구름에서 지원하는 Zep 페이지를 이용하기도 합니다!
@@ -25,8 +26,8 @@ Zep은 영상/음성 기능도 있고 격리(?)기능 화면상 회의실에 들
 기본 그라운드는 그냥 아무때나 사용가능하지만 회의실이나 스터디룸은 예약을 해야 사용할 수 있다는 사실!!
 그래도 모여서 학습하기 좋은 공간이 많다구요!!
 ```
-![Goorm Deep Dive](/images/experience/Goorm/zep.png)
-![Goorm Deep Dive](/images/experience/Goorm/zep2.png)
+![Goorm Deep Dive](/images/experience/Goorm/zep.webp)
+![Goorm Deep Dive](/images/experience/Goorm/zep2.webp)
 
 ```
 협업하면 여러가지 툴이 필요하죠?! 구름에서 협업하라고 피그마 학생팩을 지원해 주셨답니다!
@@ -34,7 +35,7 @@ Zep은 영상/음성 기능도 있고 격리(?)기능 화면상 회의실에 들
 팀원들과 공유해서 작업하는 편한함!! 저도 잘 사용하진 않지만 그래도 좀 쓸줄 안다고 처음해보시는 분들
 알려드리고 했어요!!
 ```
-![Goorm Deep Dive](/images/experience/Goorm/figma.png)
+![Goorm Deep Dive](/images/experience/Goorm/figma.webp)
 
 ```
 AI 구독비용도 지원해주셔서 저는 클로드코드를 사용하고 있고 너무 감사하게 잘 사용하고 있습니다

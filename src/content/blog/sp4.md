@@ -1,7 +1,7 @@
 ---
 title: Refresh Trip In Jeju with Goorm
 description: "Goorm Supporters"
-date: 2026-03
+date: "2026.03"
 tags: [trip, Goorm, DeepDive]
 draft: true
 ---
@@ -18,7 +18,7 @@ Goorm Deep Dive에서 이제 절반(?)의 과정을 마치고 리프래쉬 트�
 항공권과 숙소를 지원받았지요!!
 비행기 타고 제주공항 도착해서!! 함께 여행할 팀원들을 만났습니다!
 ```
-![Goorm Deep Dive](/images/blog/jeju.jpeg)
+![Goorm Deep Dive](/images/blog/jeju.webp)
 
 ```
 3개월간 쉬지않고 달려서 학습을 하고 이제 프로젝트 들어가기 전에 쉬는 시간이라니!!
@@ -26,17 +26,17 @@ Goorm Deep Dive에서 이제 절반(?)의 과정을 마치고 리프래쉬 트�
 아주 마음것 놀러 다녓습니다!(처음 제주도 온 친구도 있어서 열심히 다녔습니다.)
 사실 전 저질체력이라서 입구까지만 가고 혼자 카페가서 커피먹고 오고 그랬습니다.!! 하하!!
 ```
-![Goorm Deep Dive](/images/blog/jeju2.jpeg)
-![Goorm Deep Dive](/images/blog/jeju3.jpeg)
-![Goorm Deep Dive](/images/blog/jeju5.jpeg)
-![Goorm Deep Dive](/images/blog/jeju6.jpeg)
+![Goorm Deep Dive](/images/blog/jeju2.webp)
+![Goorm Deep Dive](/images/blog/jeju3.webp)
+![Goorm Deep Dive](/images/blog/jeju5.webp)
+![Goorm Deep Dive](/images/blog/jeju6.webp)
 
 ```
 바다도 보고 오름도 보고 유명한 관광지도 다녀보고 같이 학습하는 동료들하고 맛있는것도 먹고
 고기국수! 맛있었어요!!
 구름에서 지원해주신 회시장소 정말 너무 맛있었습니다!! 사진을 어디다 놨는지 나중에 찾아서 업뎃하겠습니다!!
 ```
-![Goorm Deep Dive](/images/blog/jeju4.jpeg)
+![Goorm Deep Dive](/images/blog/jeju4.webp)
 
 ```
 언제 또 이런 기회가 있어서 이렇게 알차게 쉬다 올 수 있을지 모르겠어요.
@@ -45,5 +45,5 @@ Goorm Deep Dive에서 이제 절반(?)의 과정을 마치고 리프래쉬 트�
 남은 3개월 또 열심히해서 좋은 결과가 있도록 해볼께요!!
 감사합니다!!
 ```
-![Goorm Deep Dive](/images/blog/jeju7.jpeg)
-![Goorm Deep Dive](/images/blog/jeju8.jpeg)
+![Goorm Deep Dive](/images/blog/jeju7.webp)
+![Goorm Deep Dive](/images/blog/jeju8.webp)

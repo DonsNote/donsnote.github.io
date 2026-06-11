@@ -17,7 +17,7 @@ export interface Post {
 }
 
 const postsDir = path.join(process.cwd(), "src/content/blog");
-const projectsDir = path.join(process.cwd(), "src/content/projects");
+const projectsDir = path.join(process.cwd(), "src/content/portfolio");
 const bootcampDir = path.join(process.cwd(), "src/content/bootcamp");
 
 export function getPostSlugs(): string[] {
@@ -60,14 +60,7 @@ export function getAllPosts(): Post[] {
     );
 }
 
-export function formatDate(dateStr: string): string {
-  if (!dateStr) return "";
-  return new Date(dateStr).toLocaleDateString("ko-KR", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-}
+export { formatDate } from "./format";
 
 export interface BlogItem {
   title: string;
@@ -94,35 +87,34 @@ function collectMdFiles(dir: string, base: string = dir): { filePath: string }[]
 
 // ── Projects ────────────────────────────────────────────────────────────────
 
-export type ProjectCategory = "개발" | "디자인" | "사업";
+export type ProjectCategory = "Development" | "Design" | "Management";
 
 export interface ProjectItem {
   title: string;
   description: string;
   tags: string[];
   githubUrl?: string;
+  figmaUrl?: string;
   siteUrl?: string;
-  status: "active" | "archived" | "wip";
+  status: "active" | "wip" | "done";
   category: ProjectCategory;
   content?: string;
 }
 
 export function getAllProjects(): ProjectItem[] {
-  if (!fs.existsSync(projectsDir)) return [];
-  return fs
-    .readdirSync(projectsDir)
-    .filter((f) => f.endsWith(".md") || f.endsWith(".mdx"))
-    .map((f) => {
-      const raw = fs.readFileSync(path.join(projectsDir, f), "utf-8");
+  return collectMdFiles(projectsDir)
+    .map(({ filePath }) => {
+      const raw = fs.readFileSync(filePath, "utf-8");
       const { data, content } = matter(raw);
       return {
-        title: (data.title as string) ?? f.replace(/\.(md|mdx)$/, ""),
+        title: (data.title as string) ?? path.basename(filePath, path.extname(filePath)),
         description: (data.description as string) ?? "",
         tags: (data.tags as string[]) ?? [],
         githubUrl: data.githubUrl as string | undefined,
+        figmaUrl: data.figmaUrl as string | undefined,
         siteUrl: data.siteUrl as string | undefined,
         status: ((data.status as string) ?? "active") as ProjectItem["status"],
-        category: ((data.category as string) ?? "개발") as ProjectItem["category"],
+        category: ((data.category as string) ?? "Development") as ProjectItem["category"],
         _order: (data.order as number) ?? 999,
         content: content.trim() || undefined,
       };

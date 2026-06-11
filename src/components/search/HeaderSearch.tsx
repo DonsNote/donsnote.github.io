@@ -4,13 +4,14 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Fuse from "fuse.js";
 import { SearchItem } from "@/lib/search";
+import { SearchIcon, CloseIcon } from "@/lib/icons";
 
 interface HeaderSearchProps {
   items: SearchItem[];
 }
 
-const typeLabel = { post: "블로그", project: "프로젝트" };
-const typeColor = { post: "var(--accent)", project: "#10b981" };
+const typeLabel: Record<SearchItem["type"], string> = { post: "블로그", project: "포트폴리오", bootcamp: "부트캠프" };
+const typeColor: Record<SearchItem["type"], string> = { post: "var(--accent)", project: "#10b981", bootcamp: "#60a5fa" };
 
 export default function HeaderSearch({ items }: HeaderSearchProps) {
   const [query, setQuery] = useState("");
@@ -77,17 +78,7 @@ export default function HeaderSearch({ items }: HeaderSearchProps) {
           className="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"
           style={{ color: "var(--text-muted)" }}
         >
-          <svg
-            viewBox="0 0 24 24"
-            width="14"
-            height="14"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            <circle cx="11" cy="11" r="8" />
-            <path d="m21 21-4.35-4.35" />
-          </svg>
+          <SearchIcon />
         </div>
         <input
           ref={inputRef}
@@ -112,25 +103,12 @@ export default function HeaderSearch({ items }: HeaderSearchProps) {
         {query && (
           <button
             onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              setQuery("");
-              setOpen(false);
-              inputRef.current?.focus();
-            }}
+            onClick={() => { setQuery(""); setOpen(false); inputRef.current?.focus(); }}
             className="absolute right-2 top-1/2 -translate-y-1/2"
             style={{ color: "var(--text-muted)" }}
             aria-label="검색어 지우기"
           >
-            <svg
-              viewBox="0 0 24 24"
-              width="12"
-              height="12"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M18 6 6 18M6 6l12 12" />
-            </svg>
+            <CloseIcon size={12} />
           </button>
         )}
       </div>

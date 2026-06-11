@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { projects } from "@/content/projects";
+import { getAllProjects, getAllBlogItems, getAllBootcamps } from "@/lib/mdx";
 import { SearchItem } from "@/lib/search";
 
 export const metadata: Metadata = {
@@ -23,12 +23,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const searchItems: SearchItem[] = [
-    ...projects.map((project) => ({
+    ...getAllProjects().map((p) => ({
       type: "project" as const,
-      title: project.title,
-      description: project.description,
-      tags: project.tags,
-      href: "/projects",
+      title: p.title,
+      description: p.description,
+      tags: p.tags,
+      href: "/portfolio",
+    })),
+    ...getAllBlogItems().map((p) => ({
+      type: "post" as const,
+      title: p.title,
+      description: p.description ?? "",
+      tags: p.tags ?? [],
+      href: "/blog",
+    })),
+    ...getAllBootcamps().map((c) => ({
+      type: "bootcamp" as const,
+      title: c.name,
+      description: c.description,
+      tags: c.tags,
+      href: `/bootcamp/${c.id}`,
     })),
   ];
 

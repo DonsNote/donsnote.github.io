@@ -39,7 +39,7 @@ function Dot({ color }: { color: string }) {
 }
 
 export default function CVPage() {
-  const projects = getAllProjects().filter((p) => p.status !== "archived");
+  const projects = getAllProjects();
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-16 space-y-12">

@@ -1,5 +1,6 @@
 import { getAllBlogItems } from "@/lib/mdx";
 import BlogModal from "@/components/blog/BlogModal";
+import PageHeader from "@/components/ui/PageHeader";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,15 +13,7 @@ export default function BlogPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-16 space-y-12">
-      {/* 헤더 */}
-      <div className="space-y-2">
-        <h1 className="text-3xl font-bold" style={{ color: "var(--text-primary)" }}>
-          Blog
-        </h1>
-        <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
-          {items.length}개의 글
-        </p>
-      </div>
+      <PageHeader title="Blog" subtitle={`${items.length}개의 글`} />
 
       {/* 포스트 목록 */}
       {items.length === 0 ? (
