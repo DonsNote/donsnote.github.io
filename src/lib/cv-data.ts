@@ -29,15 +29,15 @@ export const education: EducationItem[] = [
   {
     school: "제주대학교",
     schoolEn: "Jeju National University",
-    period: "2012",
+    period: "2011",
     major: "경영학과 (Business Administration)",
   },
   {
     school: "토론토대학교",
     schoolEn: "University of Toronto · School of continuing studies",
-    period: "2016",
-    major: "Academic English",
-    description: "level 50 (high intermediate) Certificated",
+    period: "2017",
+    major: "Academic",
+    description: "50 (high intermediate) Certificated",
   },
   {
     school: "42 Seoul · La Picine",
