@@ -138,9 +138,9 @@ export const workExperiences: WorkItem[] = [
     company: "(주)이솝이야기",
     companyEn: "Aesopos corp.",
     period: "2019",
-    role: "CEO / PM",
+    role: "CEO / PM / PD",
     description:
-      "종합 컨설팅 회사를 설립하여 5개 브랜드 런칭, 1개 프랜차이즈 설립, 15개 이상의 국가사업(조달청)을 진행하였고, 각 분야(디자인, 작가, AD, MD)의 직원들을 채용하여 프로젝트의 A to Z 참여 및 PM 역활",
+      "종합 컨설팅(브랜드 런칭, 프랜차이즈 설립), 국가사업(조달청)진행, 광고영상제작",
     category: "Business",
   },
   // Employee
@@ -148,9 +148,9 @@ export const workExperiences: WorkItem[] = [
     company: "(주)끌밋",
     companyEn: "kkeulmit Inc.",
     period: "2021",
-    role: "COO, 경영관리 (Management)",
+    role: "COO",
     description:
-      "법인설립, 인사, 노무, 재무, 공무, 행정 업무에 대한 초기 프로세스 정립. 청년 디지털일자리사업, 청년이음 등 인건비 지원사업 채결 및 적용",
+      "창업 초기 프로세스 정립. 국가 인건비 지원사업 채결 및 적용",
     category: "Employee",
   },
   {
@@ -164,7 +164,7 @@ export const workExperiences: WorkItem[] = [
   // Freelance
   {
     company: "(주)터보테크",
-    companyEn: "Turbo Tech inc.",
+    companyEn: "Turbo Tech Inc.",
     period: "2013",
     role: "대리, 인사/총무 (HR / Management)",
     description:
@@ -172,10 +172,10 @@ export const workExperiences: WorkItem[] = [
     category: "Freelance",
   },
   {
-    company: "삼사오션뷰호텔",
+    company: "삼사오션뷰호텔, 오션뷰cc",
     companyEn: "Samsa ocean view Hotel",
     period: "2015",
-    role: "과장, M&A",
+    role: "과장 인사팀 (Human Resource)",
     description:
       "오션뷰cc 인수를 위한 재무분석 및 인수비용, 수익율, 손익분기점 정리/분석. 인수 합병 후 골프장 회원권 시스템 재정비",
     category: "Freelance",
