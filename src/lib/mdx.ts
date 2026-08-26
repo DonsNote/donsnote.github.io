@@ -19,6 +19,7 @@ export interface Post {
 const postsDir = path.join(process.cwd(), "src/content/blog");
 const projectsDir = path.join(process.cwd(), "src/content/portfolio");
 const bootcampDir = path.join(process.cwd(), "src/content/bootcamp");
+const clubDir = path.join(process.cwd(), "src/content/club");
 
 export function getPostSlugs(): string[] {
   if (!fs.existsSync(postsDir)) return [];
@@ -254,6 +255,129 @@ export function getAllBootcamps(): BootcampItem[] {
       color: (root.color as string) ?? "#a78bfa",
       courses,
       groups,
+      order: (root.order as number) ?? 999,
+    });
+  }
+
+  return results.sort((a, b) => a.order - b.order).map(({ order: _, ...c }) => c);
+}
+
+// ── Club ─────────────────────────────────────────────────────────────────────
+
+export interface ActivityItem {
+  title: string;
+  description?: string;
+  content: string | null;
+  slug: string;
+}
+
+export interface ActivityGroupItem {
+  name: string;
+  activities: ActivityItem[];
+}
+
+export interface ClubItem {
+  id: string;
+  name: string;
+  period: string;
+  description: string;
+  tags: string[];
+  url?: string;
+  color: string;
+  activities?: ActivityItem[];
+  groups?: ActivityGroupItem[];
+  pamphletUrl?: string;
+  pamphletTitle?: string;
+}
+
+export function getAllClubs(): ClubItem[] {
+  if (!fs.existsSync(clubDir)) return [];
+
+  const results: (ClubItem & { order: number })[] = [];
+
+  for (const entry of fs.readdirSync(clubDir, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const dirName = entry.name;
+    const dirPath = path.join(clubDir, dirName);
+
+    // 루트 md 파일 탐색 (예: Club명/Club명.md)
+    const rootFile = fs.readdirSync(dirPath).find(
+      (f) =>
+        !fs.statSync(path.join(dirPath, f)).isDirectory() &&
+        (f.endsWith(".md") || f.endsWith(".mdx")) &&
+        f.toLowerCase() === `${dirName.toLowerCase()}.md`
+    );
+    if (!rootFile) continue;
+
+    const { data: root } = matter(fs.readFileSync(path.join(dirPath, rootFile), "utf-8"));
+
+    // 서브 디렉토리에서 활동 수집
+    const allActivities: (Omit<ActivityItem, "slug"> & { group?: string; order: number; fileName: string; subDir: string })[] = [];
+    for (const sub of fs.readdirSync(dirPath, { withFileTypes: true })) {
+      if (!sub.isDirectory()) continue;
+      const activities = readLecturesFromDir(path.join(dirPath, sub.name)).map((a) => ({
+        ...a,
+        subDir: sub.name,
+      }));
+      allActivities.push(...activities);
+    }
+
+    const hasGroups = allActivities.some((a) => a.group);
+
+    let activities: ActivityItem[] | undefined;
+    let groups: ActivityGroupItem[] | undefined;
+
+    if (hasGroups) {
+      const groupOrder: string[] = (root.group_order as string[]) ?? [];
+      const groupMap = new Map<string, { activities: ActivityItem[]; subDir: string }>();
+      for (const a of allActivities) {
+        const key = a.group ?? "기타";
+        if (!groupMap.has(key)) groupMap.set(key, { activities: [], subDir: a.subDir });
+        groupMap.get(key)!.activities.push({
+          title: a.title,
+          description: a.description,
+          content: a.content,
+          slug: a.fileName.replace(/\.(md|mdx)$/, ""),
+        });
+      }
+      groups = Array.from(groupMap.entries())
+        .sort(([nameA, { subDir: subA }], [nameB, { subDir: subB }]) => {
+          const ia = groupOrder.indexOf(nameA);
+          const ib = groupOrder.indexOf(nameB);
+          if (ia !== -1 && ib !== -1) return ia - ib;
+          if (ia !== -1) return -1;
+          if (ib !== -1) return 1;
+          return subA.localeCompare(subB);
+        })
+        .map(([name, { activities }]) => ({ name, activities }));
+    } else {
+      allActivities.sort((a, b) =>
+        a.subDir !== b.subDir
+          ? a.subDir.localeCompare(b.subDir)
+          : a.order >= 0 && b.order >= 0
+          ? a.order - b.order
+          : numericSort(a.fileName, b.fileName)
+      );
+      activities = allActivities.map((a) => ({
+        title: a.title,
+        description: a.description,
+        content: a.content,
+        slug: a.fileName.replace(/\.(md|mdx)$/, ""),
+      }));
+    }
+
+    results.push({
+      id: (root.id as string) ?? dirName.toLowerCase(),
+      name: (root.title as string) ?? dirName,
+      period: (root.period as string) ?? "",
+      description: (root.description as string) ?? "",
+      tags: (root.tags as string[]) ?? [],
+      url: root.url as string | undefined,
+      color: (root.color as string) ?? "#f472b6",
+      activities,
+      groups,
+      pamphletUrl: root.pamphletUrl as string | undefined,
+      pamphletTitle: root.pamphletTitle as string | undefined,
       order: (root.order as number) ?? 999,
     });
   }

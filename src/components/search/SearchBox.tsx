@@ -51,8 +51,8 @@ export default function SearchBox({ items }: SearchBoxProps) {
     inputRef.current?.focus();
   }, []);
 
-  const typeLabel: Record<SearchItem["type"], string> = { post: "블로그", project: "포트폴리오", bootcamp: "부트캠프" };
-  const typeColor: Record<SearchItem["type"], string> = { post: "var(--accent)", project: "#10b981", bootcamp: "#60a5fa" };
+  const typeLabel: Record<SearchItem["type"], string> = { post: "블로그", project: "포트폴리오", bootcamp: "부트캠프", club: "동아리" };
+  const typeColor: Record<SearchItem["type"], string> = { post: "var(--accent)", project: "#10b981", bootcamp: "#60a5fa", club: "#f472b6" };
 
   return (
     <div className="space-y-6">
@@ -199,7 +199,7 @@ export default function SearchBox({ items }: SearchBoxProps) {
       {/* 초기 상태 안내 */}
       {!query.trim() && (
         <p className="text-sm text-center py-8" style={{ color: "var(--text-muted)" }}>
-          블로그, 포트폴리오, 부트캠프를 검색할 수 있습니다.
+          블로그, 포트폴리오, 부트캠프, 동아리를 검색할 수 있습니다.
         </p>
       )}
     </div>

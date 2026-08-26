@@ -10,8 +10,8 @@ interface HeaderSearchProps {
   items: SearchItem[];
 }
 
-const typeLabel: Record<SearchItem["type"], string> = { post: "블로그", project: "포트폴리오", bootcamp: "부트캠프" };
-const typeColor: Record<SearchItem["type"], string> = { post: "var(--accent)", project: "#10b981", bootcamp: "#60a5fa" };
+const typeLabel: Record<SearchItem["type"], string> = { post: "블로그", project: "포트폴리오", bootcamp: "부트캠프", club: "동아리" };
+const typeColor: Record<SearchItem["type"], string> = { post: "var(--accent)", project: "#10b981", bootcamp: "#60a5fa", club: "#f472b6" };
 
 export default function HeaderSearch({ items }: HeaderSearchProps) {
   const [query, setQuery] = useState("");

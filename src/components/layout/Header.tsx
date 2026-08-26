@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/cv", label: "CV" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/bootcamp", label: "Bootcamp" },
+  { href: "/club", label: "Club" },
   { href: "/blog", label: "Blog" },
 ];
 

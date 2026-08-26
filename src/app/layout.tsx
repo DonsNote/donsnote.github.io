@@ -1,9 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import { getAllProjects, getAllBlogItems, getAllBootcamps } from "@/lib/mdx";
-import { SearchItem } from "@/lib/search";
 
 export const metadata: Metadata = {
   title: "DonsNote",
@@ -22,37 +18,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const searchItems: SearchItem[] = [
-    ...getAllProjects().map((p) => ({
-      type: "project" as const,
-      title: p.title,
-      description: p.description,
-      tags: p.tags,
-      href: "/portfolio",
-    })),
-    ...getAllBlogItems().map((p) => ({
-      type: "post" as const,
-      title: p.title,
-      description: p.description ?? "",
-      tags: p.tags ?? [],
-      href: "/blog",
-    })),
-    ...getAllBootcamps().map((c) => ({
-      type: "bootcamp" as const,
-      title: c.name,
-      description: c.description,
-      tags: c.tags,
-      href: `/bootcamp/${c.id}`,
-    })),
-  ];
-
   return (
     <html lang="ko" suppressHydrationWarning>
-      <body className="antialiased flex flex-col min-h-screen">
-        <Header searchItems={searchItems} />
-        <main className="flex-1">{children}</main>
-        <Footer />
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

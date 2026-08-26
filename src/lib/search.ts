@@ -1,5 +1,5 @@
 export interface SearchItem {
-  type: "post" | "project" | "bootcamp";
+  type: "post" | "project" | "bootcamp" | "club";
   title: string;
   description: string;
   tags: string[];
