@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "./pamphlet.css";
 
 export const metadata: Metadata = {
   title: "2026 전국 정모 | Wrangler Mania",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 export default function PamphletLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex justify-center" style={{ backgroundColor: "var(--bg-tertiary)" }}>
-      <div className="w-full max-w-md min-h-screen" style={{ backgroundColor: "var(--bg-primary)" }}>
+      <div className="pamphlet w-full max-w-md min-h-screen" style={{ backgroundColor: "var(--bg-primary)" }}>
         {children}
       </div>
     </div>

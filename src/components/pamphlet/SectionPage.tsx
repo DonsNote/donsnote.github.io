@@ -4,12 +4,12 @@ const ACCENT = "#fb923c";
 
 interface SectionPageProps {
   title: string;
-  emoji: string;
+  icon: React.ReactNode;
   homeHref: string;
   children?: React.ReactNode;
 }
 
-export default function SectionPage({ title, emoji, homeHref, children }: SectionPageProps) {
+export default function SectionPage({ title, icon, homeHref, children }: SectionPageProps) {
   return (
     <div className="flex flex-col min-h-screen">
       <header
@@ -19,18 +19,30 @@ export default function SectionPage({ title, emoji, homeHref, children }: Sectio
         <Link href={homeHref} aria-label="홈으로" className="text-lg leading-none" style={{ color: ACCENT }}>
           ←
         </Link>
-        <h1 className="text-base font-bold" style={{ color: "var(--text-primary)" }}>
-          {emoji} {title}
+        <span
+          className="flex items-center justify-center rounded-xl"
+          style={{
+            width: 28,
+            height: 28,
+            backgroundColor: ACCENT + "1a",
+            border: `1px solid ${ACCENT}33`,
+            color: ACCENT,
+          }}
+        >
+          {icon}
+        </span>
+        <h1 className="pamphlet-title text-base" style={{ color: "var(--text-primary)" }}>
+          {title}
         </h1>
       </header>
 
-      <div className="flex-1 px-5 py-10">
+      <div className="flex-1 px-5 py-6">
         {children ?? (
           <div
             className="flex flex-col items-center justify-center gap-2 text-center rounded-2xl py-16"
             style={{ backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border)" }}
           >
-            <span className="text-3xl">{emoji}</span>
+            <span style={{ color: ACCENT }}>{icon}</span>
             <p className="text-sm font-medium" style={{ color: "var(--text-secondary)" }}>
               준비 중입니다
             </p>

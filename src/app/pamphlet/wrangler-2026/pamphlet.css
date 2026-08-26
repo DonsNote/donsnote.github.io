@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Acumin Pro";
+  src: url("/fonts/acumin-pro/Acumin-RPro.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Acumin Pro";
+  src: url("/fonts/acumin-pro/Acumin-ItPro.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Acumin Pro";
+  src: url("/fonts/acumin-pro/Acumin-BdPro.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Acumin Pro";
+  src: url("/fonts/acumin-pro/Acumin-BdItPro.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BM Dohyeon";
+  src: url("/fonts/dohyeon/BMDoHyeon.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.pamphlet {
+  font-family: "Acumin Pro", "BM Dohyeon", sans-serif;
+}
+
+.pamphlet-title {
+  font-weight: 700;
+  font-style: italic;
+}
