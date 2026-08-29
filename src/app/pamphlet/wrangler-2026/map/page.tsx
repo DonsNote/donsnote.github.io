@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SectionPage from "@/components/pamphlet/SectionPage";
 import NaverMap from "@/components/pamphlet/NaverMap";
+import BoothLayout from "@/components/pamphlet/BoothLayout";
 import { MapIcon, MapPinIcon, CarIcon, ParkingCircleIcon, PhoneIcon } from "@/components/pamphlet/icons";
 import { getMapContent } from "@/lib/pamphlet";
 
@@ -56,6 +57,13 @@ export default function MapPage() {
             fallbackImage={content.mapImage}
           />
         </div>
+
+        <BoothLayout
+          src="/images/pamphlet/booth-layout.png"
+          alt="행사 부스 배치도"
+          width={1578}
+          height={2600}
+        />
 
         <div className="flex flex-col gap-3 p-4" style={CARD}>
           <SectionHeader icon={<CarIcon size={18} />} title="교통 안내" />
