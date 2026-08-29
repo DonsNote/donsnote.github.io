@@ -17,10 +17,10 @@ export default function PamphletHome() {
     <div className="flex flex-col min-h-screen">
       <div className="px-6 pt-8 pb-6">
         <Image
-          src="/images/club/teaser-poster-red.png"
+          src="/images/pamphlet/teaser-poster.png"
           alt="2026 전국 정모 티저 포스터"
-          width={1417}
-          height={2004}
+          width={1421}
+          height={2012}
           priority
           className="w-full h-auto rounded-2xl shadow-lg"
           style={{ border: "1px solid var(--border)" }}

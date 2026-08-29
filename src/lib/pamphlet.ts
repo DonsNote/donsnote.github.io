@@ -44,6 +44,8 @@ export interface MapContent {
   venueAddress: string;
   mapImage: string;
   mapLabel: string;
+  mapLat: number;
+  mapLng: number;
   traffic: { label: string; value: string }[];
   parkingNote: string;
   contactValue: string;

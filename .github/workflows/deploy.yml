@@ -35,6 +35,8 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
+          # 네이버 지도 Client ID — Settings > Secrets and variables > Actions 에 등록
+          NEXT_PUBLIC_NAVER_MAP_CLIENT_ID: ${{ secrets.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

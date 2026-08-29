@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import SectionPage from "@/components/pamphlet/SectionPage";
 import { InfoIcon } from "@/components/pamphlet/icons";
 import { getIntroContent } from "@/lib/pamphlet";
@@ -18,6 +19,17 @@ export default function IntroPage() {
   return (
     <SectionPage title="행사 소개" icon={<InfoIcon size={16} />} homeHref="/pamphlet/wrangler-2026">
       <div className="flex flex-col gap-4">
+        <div className="flex justify-center pt-2 pb-1">
+          <Image
+            src="/images/pamphlet/wrangler-mania-logo.svg"
+            alt="WRANGLER MANIA"
+            width={329}
+            height={101}
+            priority
+            className="w-[329px] max-w-full h-auto"
+          />
+        </div>
+
         <div className="flex flex-col gap-3 p-5" style={CARD}>
           <div className="flex items-center gap-2.5">
             <span

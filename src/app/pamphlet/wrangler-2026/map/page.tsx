@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import SectionPage from "@/components/pamphlet/SectionPage";
+import NaverMap from "@/components/pamphlet/NaverMap";
 import { MapIcon, MapPinIcon, CarIcon, ParkingCircleIcon, PhoneIcon } from "@/components/pamphlet/icons";
 import { getMapContent } from "@/lib/pamphlet";
 
@@ -49,27 +49,12 @@ export default function MapPage() {
 
         <div className="flex flex-col gap-3 p-4" style={CARD}>
           <SectionHeader icon={<MapIcon size={18} />} title="지도 보기" />
-          <div className="relative rounded-xl overflow-hidden" style={{ height: 180 }}>
-            <Image
-              src={content.mapImage}
-              alt={content.mapLabel}
-              fill
-              className="object-cover"
-              style={{ filter: "brightness(0.85)" }}
-            />
-            <div
-              className="absolute top-3 left-3 flex items-center gap-2 px-2.5 py-1.5 rounded-full text-xs font-semibold"
-              style={{
-                backgroundColor: "rgba(13,17,23,0.8)",
-                border: "1px solid var(--border)",
-                color: "var(--text-primary)",
-                backdropFilter: "blur(6px)",
-              }}
-            >
-              <MapPinIcon size={16} />
-              {content.mapLabel}
-            </div>
-          </div>
+          <NaverMap
+            lat={content.mapLat}
+            lng={content.mapLng}
+            label={content.mapLabel}
+            fallbackImage={content.mapImage}
+          />
         </div>
 
         <div className="flex flex-col gap-3 p-4" style={CARD}>

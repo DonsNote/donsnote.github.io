@@ -46,3 +46,8 @@
   font-weight: 700;
   font-style: italic;
 }
+
+/* Tailwind preflight(img { max-width: 100% })가 네이버 지도 타일/컨트롤을 찌그러뜨리는 것 방지 */
+.naver-map img {
+  max-width: none;
+}

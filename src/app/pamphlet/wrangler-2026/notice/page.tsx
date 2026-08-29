@@ -34,10 +34,10 @@ export default function NoticePage() {
               }}
             >
               <span
-                className="flex items-center justify-center rounded-2xl flex-shrink-0"
-                style={{ width: 32, height: 32, backgroundColor: ACCENT + "1a", color: ACCENT }}
+                className="flex items-center justify-center rounded-2xl flex-shrink-0 text-[18px] leading-none"
+                style={{ width: 32, height: 32, backgroundColor: ACCENT + "1a" }}
               >
-                <AlertTriangleIcon size={18} />
+                ⚠️
               </span>
               <div className="flex-1 min-w-0 flex flex-col gap-1">
                 <p
