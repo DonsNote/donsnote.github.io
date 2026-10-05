@@ -1,15 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
-import { InfoIcon, CalendarIcon, MapIcon, AlertTriangleIcon, HandshakeIcon } from "@/components/pamphlet/icons";
+import {
+  InfoIcon,
+  CalendarIcon,
+  MapIcon,
+  AlertTriangleIcon,
+  HandshakeIcon,
+  GiftIcon,
+  LayoutGridIcon,
+} from "@/components/pamphlet/icons";
 
 const ACCENT = "#fb923c";
 
 const sections = [
-  { href: "/pamphlet/wrangler-2026/intro", icon: InfoIcon, title: "행사 소개", desc: "9차 전국 정모를 소개합니다" },
-  { href: "/pamphlet/wrangler-2026/schedule", icon: CalendarIcon, title: "행사 일정", desc: "당일 타임테이블" },
-  { href: "/pamphlet/wrangler-2026/map", icon: MapIcon, title: "행사장 약도", desc: "용평리조트 배치도" },
+  { href: "/pamphlet/wrangler-2026/intro", icon: InfoIcon, title: "행사 소개", desc: "12차 전국 정모를 소개합니다" },
   { href: "/pamphlet/wrangler-2026/notice", icon: AlertTriangleIcon, title: "주의할 점", desc: "참가 전 꼭 확인하세요" },
+  { href: "/pamphlet/wrangler-2026/schedule", icon: CalendarIcon, title: "행사 일정", desc: "당일 타임테이블" },
+  { href: "/pamphlet/wrangler-2026/map", icon: MapIcon, title: "행사장 안내", desc: "위치·교통·주차 안내" },
+  { href: "/pamphlet/wrangler-2026/booths", icon: LayoutGridIcon, title: "행사부스 안내", desc: "행사부스 배치도" },
   { href: "/pamphlet/wrangler-2026/partners", icon: HandshakeIcon, title: "협력업체 소개", desc: "함께하는 업체들" },
+  { href: "/pamphlet/wrangler-2026/prizes", icon: GiftIcon, title: "경품 안내", desc: "협력업체·개인 협찬품 모음" },
 ];
 
 export default function PamphletHome() {
@@ -60,12 +70,6 @@ export default function PamphletHome() {
           );
         })}
       </nav>
-
-      <div className="px-6 pb-8 pt-4 text-center">
-        <Link href="/club/wrangler-mania" className="text-xs" style={{ color: "var(--text-muted)" }}>
-          ← DonsNote로 돌아가기
-        </Link>
-      </div>
     </div>
   );
 }

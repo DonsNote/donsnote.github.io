@@ -67,7 +67,9 @@ export interface PartnerCard {
   code: string;
   name: string;
   role: string;
-  desc: string;
+  desc?: string;
+  contact?: string;
+  phone?: string;
 }
 
 export interface PartnerGroup {
@@ -78,6 +80,23 @@ export interface PartnerGroup {
 
 export interface PartnersContent {
   groups: PartnerGroup[];
+}
+
+export interface PrizeItem {
+  name: string;
+  desc: string;
+  image?: string;
+}
+
+export interface PrizeGroup {
+  title: string;
+  items: PrizeItem[];
+}
+
+export interface PrizesContent {
+  title: string;
+  subtitle: string;
+  groups: PrizeGroup[];
 }
 
 export function getIntroContent(pamphletId: string): IntroContent {
@@ -98,4 +117,8 @@ export function getNoticeContent(pamphletId: string): NoticeContent {
 
 export function getPartnersContent(pamphletId: string): PartnersContent {
   return readFrontmatter<PartnersContent>(pamphletId, "partners");
+}
+
+export function getPrizesContent(pamphletId: string): PrizesContent {
+  return readFrontmatter<PrizesContent>(pamphletId, "prizes");
 }

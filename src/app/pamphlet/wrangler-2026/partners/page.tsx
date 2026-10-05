@@ -49,9 +49,18 @@ export default function PartnersPage() {
                     </p>
                   </div>
                 </div>
-                <p className="text-[13px] leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-                  {p.desc}
-                </p>
+                {p.desc && (
+                  <p className="text-[13px] leading-relaxed" style={{ color: "var(--text-secondary)" }}>
+                    {p.desc}
+                  </p>
+                )}
+                {(p.contact || p.phone) && (
+                  <p className="text-[12px]" style={{ color: "var(--text-muted)" }}>
+                    {p.contact}
+                    {p.contact && p.phone && " · "}
+                    {p.phone}
+                  </p>
+                )}
               </div>
             ))}
           </div>

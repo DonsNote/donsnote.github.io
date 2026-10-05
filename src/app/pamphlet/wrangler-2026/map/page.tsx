@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import SectionPage from "@/components/pamphlet/SectionPage";
 import NaverMap from "@/components/pamphlet/NaverMap";
-import BoothLayout from "@/components/pamphlet/BoothLayout";
 import { MapIcon, MapPinIcon, CarIcon, ParkingCircleIcon, PhoneIcon } from "@/components/pamphlet/icons";
 import { getMapContent } from "@/lib/pamphlet";
 
-export const metadata: Metadata = { title: "행사장 약도 | 2026 전국 정모" };
+export const metadata: Metadata = { title: "행사장 안내 | 2026 전국 정모" };
 
 const ACCENT = "#fb923c";
 const CARD: React.CSSProperties = {
@@ -34,7 +33,7 @@ export default function MapPage() {
   const content = getMapContent("wrangler-2026");
 
   return (
-    <SectionPage title="행사장 약도" icon={<MapIcon size={16} />} homeHref="/pamphlet/wrangler-2026">
+    <SectionPage title="행사장 안내" icon={<MapIcon size={16} />} homeHref="/pamphlet/wrangler-2026">
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-3 p-4" style={CARD}>
           <SectionHeader icon={<MapPinIcon size={18} />} title="행사장 위치" />
@@ -57,13 +56,6 @@ export default function MapPage() {
             fallbackImage={content.mapImage}
           />
         </div>
-
-        <BoothLayout
-          src="/images/pamphlet/booth-layout.png"
-          alt="행사 부스 배치도"
-          width={1578}
-          height={2600}
-        />
 
         <div className="flex flex-col gap-3 p-4" style={CARD}>
           <SectionHeader icon={<CarIcon size={18} />} title="교통 안내" />
@@ -90,10 +82,7 @@ export default function MapPage() {
 
         <div className="flex flex-col gap-3 p-4" style={CARD}>
           <SectionHeader icon={<PhoneIcon size={18} />} title="문의" />
-          <div className="flex items-center gap-2.5">
-            <span style={{ color: ACCENT }}>
-              <PhoneIcon size={18} />
-            </span>
+          <div className="flex items-center">
             <p className="text-sm font-semibold" style={{ color: "var(--text-primary)" }}>
               {content.contactValue}
             </p>

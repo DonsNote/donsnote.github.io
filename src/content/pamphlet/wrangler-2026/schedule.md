@@ -3,45 +3,43 @@ days:
   - badge: DAY 1
     date: 10월 17일 (토)
     items:
-      - time: "10:00"
-        timeEnd: "~ 12:00"
-        title: 현장 등록 및 텐트 설치
-        desc: 캠프장 입장 및 준비
       - time: "12:00"
-        timeEnd: "~ 13:00"
-        title: 점심 식사
-        desc: 공식 식사 제공
-      - time: "13:00"
-        timeEnd: "~ 15:00"
-        title: 오프로드 트레일 체험
-        desc: 지정 코스 주행
-      - time: "15:00"
         timeEnd: "~ 17:00"
-        title: 차량 전시 & 자유 교류
-        desc: 오픈 카쇼 및 네트워킹
-      - time: "17:00"
-        timeEnd: "~ 18:00"
-        title: 저녁 식사 (BBQ)
-        desc: 공식 식사 제공
-      - time: "18:00"
-        timeEnd: "~ 20:00"
-        title: 캠프파이어 & 경품 추첨
-        desc: 이벤트 및 경품 증정
+        title: 기념품수령 및 숙소 체크인
+        desc: "운영실 및 프론트 · 13:00 체크인 (객실정리완료된곳부터 가능)"
+      - time: "12:00"
+        timeEnd: "~ 17:30"
+        title: 행사부스 & 정모이벤트 & 리조트시설
+        desc: "필로티주차장 및 리조트 내 · 부스관람 & 오프로드모듈 체험"
+      - time: "17:30"
+        timeEnd: "~ 19:00"
+        title: 석식 (모나용평 뷔페)
+        desc: "블리스힐스테이 웰니스홀 · 명찰(식권)지참 필수"
+      - time: "19:00"
+        timeEnd: "~ 21:00"
+        title: 전국정모 메인행사 1부
+        desc: "블리스힐스테이 웰니스홀 · 메인행사 & 행운권 1일차"
+      - time: "21:00"
+        timeEnd: "~ 23:30"
+        title: 전국정모 메인행사 2부
+        desc: "블리스힐스테이 웰니스홀 · 키즈매직쇼 & 뒷풀이"
+      - time: "23:30"
+        title: 1일차 행사종료
   - badge: DAY 2
     date: 10월 18일 (일)
     items:
       - time: "08:00"
-        timeEnd: "~ 09:00"
-        title: 아침 식사
-        desc: 공식 식사 제공
-      - time: "09:00"
+        timeEnd: "~ 09:30"
+        title: 조식 (블리스힐스테이 식당)
+        desc: "카페테리아 아백(웰니스홀앞) · 황태해장국"
+      - time: "09:30"
         timeEnd: "~ 11:00"
-        title: 오프로드 동반주행
-        desc: 공동 주행 및 탐험
+        title: 숙소 체크아웃
+        desc: 각 숙소 프론트
       - time: "11:00"
-        timeEnd: "~ 12:00"
-        title: 단체 사진 촬영 & 폐회식
-        desc: 행사 마무리
-      - time: "12:00"
-        title: 철수 및 귀가
+        timeEnd: "~ 12:30"
+        title: 슬로프체험 및 기념사진촬영
+        desc: "주차장 · 2일차 행운권추첨"
+      - time: "12:30"
+        title: 2일차 행사종료 및 해산
 ---
