@@ -285,10 +285,4 @@ groups:
         desc: 랭글러 튜닝, 정비
         contact: 장나리
         phone: 010-3093-8846
-      - code: 포르
-        name: 포르텍
-        role: 업데이트중
-      - code: 협회
-        name: 국토부 산하 한국자동차 튜닝 협회
-        role: 업데이트중
 ---
