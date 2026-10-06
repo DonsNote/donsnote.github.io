@@ -49,8 +49,8 @@ groups:
         name: 포바이포팩토리
         role: 경기/광주
         desc: 랭글러 튜닝, 정비
-        contact: 워너히니
-        phone: 010-6732-8290
+        contact: 워너허니
+        phone: 010-6632-8290
       - code: 성운
         name: 성운카마스타
         role: 전주/전북
