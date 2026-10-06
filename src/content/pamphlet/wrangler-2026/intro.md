@@ -2,7 +2,7 @@
 badge: Welcome
 badgeLabel: 행사 소개
 title: 제12회 랭글러 매니아 전국정모
-description: 랭글러매니아 전국정모입니다. 오프로드를 함께 즐기며 오너들의 만남의 장을 만들고자 합니다.
+description: 랭글러매니아 전국정모입니다. 오프로드를 함께 즐기며 회원들의 만남의 장을 만들고자 합니다.
 overviewTitle: 행사 개요
 overviewSubtitle: Overview
 overview: 전국의 랭글러매니아 회원들이 모여 오프로드 체험과 랭들러매니아 회원의 친목을 즐기는 행사입니다. 모나 용평 리조트에서 차량을 소개하고, 오프로드 코스를 함께 타며, 매니아들과 즐기세요!
