@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
-import SectionPage from "@/components/pamphlet/SectionPage";
 import NaverMap from "@/components/pamphlet/NaverMap";
-import { MapIcon, MapPinIcon, CarIcon, ParkingCircleIcon, PhoneIcon } from "@/components/pamphlet/icons";
+import SectionPage from "@/components/pamphlet/SectionPage";
+import { CarIcon, MapIcon, MapPinIcon, ParkingCircleIcon } from "@/components/pamphlet/icons";
 import { getMapContent } from "@/lib/pamphlet";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "행사장 안내 | 2026 전국 정모" };
 
@@ -78,15 +78,6 @@ export default function MapPage() {
           <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
             {content.parkingNote}
           </p>
-        </div>
-
-        <div className="flex flex-col gap-3 p-4" style={CARD}>
-          <SectionHeader icon={<PhoneIcon size={18} />} title="문의" />
-          <div className="flex items-center">
-            <p className="text-sm font-semibold" style={{ color: "var(--text-primary)" }}>
-              {content.contactValue}
-            </p>
-          </div>
         </div>
       </div>
     </SectionPage>
