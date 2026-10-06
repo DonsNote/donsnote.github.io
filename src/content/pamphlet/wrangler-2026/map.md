@@ -12,5 +12,4 @@ traffic:
   - label: 네비게이션
     value: "검색어: '모나용평'"
 parkingNote: 행사장 내 무료 주차 가능
-contactValue: 010-XXXX-XXXX (운영진)
 ---

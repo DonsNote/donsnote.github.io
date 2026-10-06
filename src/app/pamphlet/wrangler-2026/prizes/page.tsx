@@ -32,27 +32,16 @@ export default function PrizesPage() {
                   className="flex flex-col overflow-hidden"
                   style={{ backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border)", borderRadius: 16 }}
                 >
-                  {item.image ? (
-                    <div className="relative w-full aspect-square">
-                      <Image src={item.image} alt={`${item.name} ${item.desc}`} fill className="object-cover" />
-                    </div>
-                  ) : (
-                    <div
-                      className="flex items-center justify-center w-full aspect-square text-xs"
-                      style={{ backgroundColor: "var(--bg-tertiary)", color: "var(--text-muted)" }}
-                    >
-                      업데이트중
-                    </div>
-                  )}
+                  <div className="relative w-full aspect-square">
+                    <Image src={item.image} alt={`${item.name} ${item.desc}`} fill className="object-cover" />
+                  </div>
                   <div className="flex flex-col gap-1 p-3">
                     <p className="text-[13px] font-bold truncate" style={{ color: "var(--text-primary)" }}>
                       {item.name}
                     </p>
-                    {item.desc && (
-                      <p className="text-[12px] leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-                        {item.desc}
-                      </p>
-                    )}
+                    <p className="text-[12px] leading-relaxed" style={{ color: "var(--text-secondary)" }}>
+                      {item.desc}
+                    </p>
                   </div>
                 </div>
               ))}

@@ -85,7 +85,7 @@ export interface PartnersContent {
 export interface PrizeItem {
   name: string;
   desc: string;
-  image?: string;
+  image: string;
 }
 
 export interface PrizeGroup {

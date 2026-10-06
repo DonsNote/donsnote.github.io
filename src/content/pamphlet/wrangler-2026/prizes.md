@@ -76,12 +76,9 @@ groups:
       - name: 선우시트
         desc: 통풍시트 1좌석 시공권 3대분
         image: /images/pamphlet/prizes/p24.png
-      - name: 업데이트중
-        desc: ""
-      - name: 업데이트중
-        desc: ""
-      - name: 업데이트중
-        desc: ""
+      - name: 디자인웍스
+        desc: 행사용포토월
+        image: /images/pamphlet/prizes/p25.png
   - title: 개인회원 협찬품
     items:
       - name: 경기광주81
@@ -114,8 +111,16 @@ groups:
       - name: 건짱
         desc: 소프트쿨러·AO쿨러 12팩1개, 24개 2개
         image: /images/pamphlet/prizes/i10.png
-      - name: 업데이트중
-        desc: ""
-      - name: 업데이트중
-        desc: ""
+      - name: 인박사
+        desc: 플레이팅도마 2개
+        image: /images/pamphlet/prizes/i11.png
+      - name: 명보
+        desc: 오프로드견인바세트 2개
+        image: /images/pamphlet/prizes/i12.png
+      - name: 포르텍
+        desc: 행사촬영지원
+        image: /images/pamphlet/prizes/i13.png
+      - name: 국토부 산하 한국자동차 튜너 협회
+        desc: 오프로드 모듈
+        image: /images/pamphlet/prizes/i14.png
 ---
