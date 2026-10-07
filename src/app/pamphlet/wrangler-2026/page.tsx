@@ -8,6 +8,7 @@ import {
   HandshakeIcon,
   GiftIcon,
   LayoutGridIcon,
+  TicketIcon,
 } from "@/components/pamphlet/icons";
 
 const ACCENT = "#fb923c";
@@ -20,6 +21,7 @@ const sections = [
   { href: "/pamphlet/wrangler-2026/booths", icon: LayoutGridIcon, title: "행사부스 안내", desc: "행사부스 배치도" },
   { href: "/pamphlet/wrangler-2026/partners", icon: HandshakeIcon, title: "협력업체 소개", desc: "함께하는 업체들" },
   { href: "/pamphlet/wrangler-2026/prizes", icon: GiftIcon, title: "경품 안내", desc: "협력업체·개인 협찬품 모음" },
+  { href: "/pamphlet/wrangler-2026/coupon", icon: TicketIcon, title: "모나용평 할인권", desc: "바코드 제시 후 할인 혜택" },
 ];
 
 export default function PamphletHome() {
