@@ -79,6 +79,9 @@ groups:
       - name: 디자인웍스
         desc: 행사용포토월
         image: /images/pamphlet/prizes/p25.png
+      - name: 트레일컨셉
+        desc: 30만원 바우쳐 3매 (IRURI, MOPAR, OMU 각 1매씩)
+        image: /images/pamphlet/prizes/p26.png
   - title: 개인회원 협찬품
     items:
       - name: 경기광주81
@@ -109,7 +112,7 @@ groups:
         desc: 오리머리핀 400개
         image: /images/pamphlet/prizes/i09.png
       - name: 건짱
-        desc: 소프트쿨러·AO쿨러 12팩1개, 24개 2개
+        desc: 소프트쿨러·AO쿨러 12팩1개, 24팩 2개
         image: /images/pamphlet/prizes/i10.png
       - name: 인박사
         desc: 플레이팅도마 2개
@@ -123,4 +126,7 @@ groups:
       - name: 국토부 산하 한국자동차 튜너 협회
         desc: 오프로드 모듈
         image: /images/pamphlet/prizes/i14.png
+      - name: 가을낭구
+        desc: 예술정원1999 입장권 20매
+        image: /images/pamphlet/prizes/i15.png
 ---
