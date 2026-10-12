@@ -82,6 +82,12 @@ groups:
       - name: 트레일컨셉
         desc: 30만원 바우쳐 3매 (IRURI, MOPAR, OMU 각 1매씩)
         image: /images/pamphlet/prizes/p26.png
+      - name: 튜닝33
+        desc: JL,JT용 힌지 1대분, JL 벤트 1대분
+        image: /images/pamphlet/prizes/p27.png
+      - name: 달리이팩트
+        desc: JL 1열 실내등 5대분
+        image: /images/pamphlet/prizes/p28.png
   - title: 개인회원 협찬품
     items:
       - name: 경기광주81
